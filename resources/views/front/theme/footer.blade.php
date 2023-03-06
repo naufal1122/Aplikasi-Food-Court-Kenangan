@@ -240,7 +240,7 @@ aria-hidden="true">
   </div>
   <div class="copy-right text-center">
     <a href="{{URL::to('/privacy')}}" style="color: #fff;"> {{ trans('labels.privacy_policy') }} </a>
-    <p>{{@$getinfo->copyright}} <br> Designed & Developed by <a href="http://infotechgravity.com/" target="_blank" style="color: #fff;"><b>Gravity Infotech</b>.</a></p>
+    <p>{{@$getinfo->copyright}} <br> FoodCourt App v1.0 by :  <a href="http://infotechgravity.com/" target="_blank" style="color: #fff;"><b>❤️ PBL Team Food Court Kenangan</b>.</a></p>
   </div>
 </footer>
 
