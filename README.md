@@ -5,4 +5,4 @@
 
 Work In Progress, see you later...<br>
 <p>Built With ❤️ Laravel by : PBL Team 2023 Teknik Informatika Universitas Sebelas Maret</p>
-<p>Last Update, 05 Maret 2023.</p>
+<p>Last Update, 06 Maret 2023.</p>
