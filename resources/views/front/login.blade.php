@@ -71,11 +71,11 @@
             <p class="forgot"><a href=  "{{URL::to('/forgot-password')}}" >{{ trans('labels.forgot_password') }}</a></p>
             <button type="submit" class="btn w-100">{{ trans('labels.login') }}</button>
             <p class="other"><a>{{ trans('labels.or') }}</a></p>
-            <a href="{{ url('auth/google') }}" class="btngoogle" style="background-color: #fff;">
-                <img src='{!! asset("storage/app/public/front/images/ic_google.png") !!}' alt="">
+            <a href="{{ url('auth/google') }}" class="btngoogle w-50 mt-3" style="background-color: #fff;">
+                <img src='{!! asset("storage/app/public/front/images/ic_google.png") !!}' alt="" class="imgsocial">
             </a>
-            <a href="{{ url('auth/facebook') }}" class="btnfb" style="background-color: #fff;">
-                <img src='{!! asset("storage/app/public/front/images/ic_fb_fix.png") !!}' alt="">
+            <a href="{{ url('auth/facebook') }}" class="btnfacebook w-50 mt-3" style="background-color: #fff;">
+                <img src='{!! asset("storage/app/public/front/images/ic_fb.png") !!}' alt="" class="imgsocial">
             </a>
             <p class="already">{{ trans('labels.dont_account') }} <a href="{{URL::to('/signup')}}">{{ trans('labels.signup') }}</a></p>
 

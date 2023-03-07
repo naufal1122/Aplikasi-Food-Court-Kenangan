@@ -2453,3 +2453,29 @@ label input:checked+.cart-delivery-type-box {
   font-size: 16px;
   margin-left: 120px;
 }
+
+.btnfacebook {
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 25px;
+  border-radius: 15px;
+  background-color: var(--primary-color-hover);
+  box-shadow: 0 0 4px rgb(172, 172, 172)
+}
+
+.btngoogle {
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 25px;
+  border-radius: 15px;
+  background-color: var(--primary-color-hover);
+  box-shadow: 0 0 4px rgb(172, 172, 172)
+}
+
+.imgsocial {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
