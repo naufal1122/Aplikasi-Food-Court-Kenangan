@@ -2427,3 +2427,29 @@ label input:checked+.cart-delivery-type-box {
   text-align: right;
   color: #6C6BBF;
 }
+
+.btnfb {
+    margin-top: 11px;
+    border-radius: 100%;
+    box-shadow: 0 0 4px rgb(183, 182, 182);
+    color: rgb(181, 69, 69);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 120px;
+}
+
+.btngoogle {
+  margin-top: 11px;
+  border-radius: 100%;
+  box-shadow: 0 0 4px rgb(183, 182, 182);
+  color: rgb(181, 69, 69);
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 120px;
+}
