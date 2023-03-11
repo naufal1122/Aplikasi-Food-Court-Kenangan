@@ -64,20 +64,14 @@
         <form id="login" action="{{ URL::to('/signin/login') }}" method="post">
             @csrf
             <span class="headsign">
-            {{ trans('labels.login') }}
+            {{ trans('labels.lupa_password') }}
 			</span>
+            <div class="frgtpass">
+            <p>Masukkan email anda untuk mengirimkan kode OTP</p>
+            </div>
             <input type="email" name="email" id="email" placeholder="{{ trans('messages.enter_email') }}" class="w-100" required="">
-            <input type="password" name="password" id="password" placeholder="{{ trans('messages.enter_password') }}" class="w-100" required="">
-            <p class="forgot"><a href=  "{{URL::to('/forgot-password')}}" >{{ trans('labels.forgot_password') }}</a></p>
-            <button type="submit" class="btn w-100">{{ trans('labels.login') }}</button>
-            <p class="other"><a>{{ trans('labels.or') }}</a></p>
-            <a href="{{ url('auth/google') }}" class="btngoogle w-50 mt-3" style="background-color: #fff;">
-                <img src='{!! asset("storage/app/public/front/images/icon_google.png") !!}' alt="" class="imgsocial">
-            </a>
-            <a href="{{ url('auth/facebook') }}" class="btnfacebook w-50 mt-3" style="background-color: #fff;">
-                <img src='{!! asset("storage/app/public/front/images/ic_facebook.png") !!}' alt="" class="imgsocial">
-            </a>
-            <p class="already">{{ trans('labels.dont_account') }} <a href="{{URL::to('/signup')}}">{{ trans('labels.signup') }}</a></p>
+            <button type="submit" class="btn w-100" href="{{URL::to('/otp')}}">{{ trans('labels.send') }}</button>
+            
 
             @if (\Session::has('danger'))
                 <div class="alert alert-danger w-100">
