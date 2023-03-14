@@ -61,7 +61,7 @@
                 <p><b>Food Court Kenangan</b></p>
             </a>
         </div>
-        <form id="login" action="{{ URL::to('/signin/login') }}" method="post">
+        <form id="login" action="{{ URL::to('/otp-verification') }}" method="post">
             @csrf
             <span class="headsign">
             {{ trans('labels.lupa_password') }}
@@ -69,7 +69,13 @@
             <div class="frgtpass">
             <p>Masukkan kode OTP yang telah dikirim melalui email anda</p>
             </div>
-            <input type="email" name="email" id="email" placeholder="{{ trans('messages.otp_required') }}" class="w-100" required="">
+            <input type="email" name="email" id="email" placeholder="Email" class="w-100" value="{{Session::get('email')}}" readonly="">
+            
+            @if (env('Environment') == 'sendbox')
+                <input type="number" name="otp" id="otp" min="1" maxlength="6" placeholder="Verification code" class="w-100" required="" value="{{Session::get('otp')}}">
+            @else
+                <input type="number" name="otp" id="otp" min="1" maxlength="6" placeholder="Verification code" class="w-100" required="">
+            @endif  
             <button type="submit" class="btn w-100">{{ trans('labels.send') }}</button>
             
 

@@ -52,6 +52,8 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get('/otp-verify', 'UserController@otp_verify');
 	Route::get('/resend-otp', 'UserController@resend_otp');
 	Route::post('/otp-verification', 'UserController@otp_verification');
+	Route::get ('/logout', 'UserController@logout' );
+
 });
 
 Auth::routes();
