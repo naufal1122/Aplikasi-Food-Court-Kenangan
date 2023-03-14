@@ -239,8 +239,7 @@ aria-hidden="true">
     </div>
   </div>
   <div class="copy-right text-center">
-    <a href="{{URL::to('/privacy')}}" style="color: #fff;"> {{ trans('labels.privacy_policy') }} </a>
-    <p>{{@$getinfo->copyright}} <br> FoodCourt App v1.0 by :  <a href="http://infotechgravity.com/" target="_blank" style="color: #fff;"><b>❤️ PBL Team Food Court Kenangan</b>.</a></p>
+    <p>FoodCourt App v1.0 by :  <a href="#" target="_blank" style="color: #fff;"><b>❤️ PBL Team Teknik Informatika UNS 23</b></a><br>Copyright © 2023 | Food Court Kenangan.</p>
   </div>
 </footer>
 

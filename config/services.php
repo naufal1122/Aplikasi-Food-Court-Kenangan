@@ -37,9 +37,9 @@ return [
     ],
 
     'google' => [
-        'client_id' => 'XXXXXXXXXXXXXXXXXXXX',
-        'client_secret' => 'XXXXXXXXXXXXXXXXXXXX',
-        'redirect' => 'http://localhost/project/auth/facebook/callback/auth/google/callback',
+        'client_id' => '736234785513-1borg7jrn3a7iu8ls5g5ho8oe76a63j6.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://127.0.0.1:8000/auth/google/callback',
     ],
 
 ];
