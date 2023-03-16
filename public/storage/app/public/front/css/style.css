@@ -1502,8 +1502,13 @@ body .promo-modal.modal {
   display: flex;
   position: relative;
   align-items: center;
-  margin: 0 92px 30px;
+  margin-bottom: 20px;
 }
+
+.signup-logo a p {
+  width: 110px;
+}
+
 
 .signup-sec form {
   padding: 20px 40px;
@@ -2457,4 +2462,5 @@ margin-right: auto;
 .frgtpass p{
   font-size: 15px;
   margin-bottom: 40px;
+  text-align: center;
 }

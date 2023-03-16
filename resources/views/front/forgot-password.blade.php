@@ -58,7 +58,7 @@
         <div class="signup-logo">
             <a href="{{URL::to('/')}}">
                 <img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" alt="">
-                <p><b>Food Court Kenangan</b></p>
+                <p><b>FoodCourt Kenangan</b></p>
             </a>
         </div>
         <form id="login" action="{{ URL::to('/signin/login') }}" method="post">
