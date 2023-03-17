@@ -24,7 +24,7 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="#"><center><img src="{!! asset('storage/app/public/assets/images/logo.png') !!}" height="100" alt=""></center></a>
+                                <a class="text-center" href="#"><center><img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" height="60" alt=""></center></a>
 
                                 <form method="POST" class="mt-5 mb-5 login-input" action="{{ route('login') }}">
                                     @csrf
@@ -53,9 +53,6 @@
                                         {{ __('Login') }}
                                     </button>
                                 </form>
-
-                                
-                                </div>
                             </div>
                         </div>
                     </div>

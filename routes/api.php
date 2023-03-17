@@ -17,18 +17,3 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::group(['namespace'=>'Api'],function (){
-
-    Route::post('login','UserController@login');
-    Route::post('register','UserController@register');
-    Route::post('otpverify','UserController@otpverify');
-    Route::post('editprofile','UserController@editprofile');
-    Route::post('getprofile','UserController@getprofile');
-    Route::post('changepassword','UserController@changepassword');
-    Route::post('forgotPassword','UserController@forgotPassword');
-    Route::get('restaurantslocation','UserController@restaurantslocation');
-    Route::post('resendotp','UserController@resendotp');
-    Route::post('contact','UserController@contact');
-
-});

@@ -56,6 +56,19 @@ Route::group(['namespace' => 'front'], function () {
 
 });
 
+Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
+	
+	Route::get('/', function () {
+		return view('auth.login');
+	});
+
+	Route::group(['middleware' => ['AdminAuth']],function(){
+		Route::get('home', 'AdminController@home');
+	});
+
+	Route::get('logout', 'AdminController@logout');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
