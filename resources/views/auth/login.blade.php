@@ -7,11 +7,15 @@
     <title>{{ trans('labels.admin_title') }}</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('storage/app/public/assets/images/favicon.png')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('storage/app/public/assets/css/fonts.css')}}">
     <link href="{{asset('storage/app/public/assets/css/style.css')}}" rel="stylesheet">
+
     
 </head>
 
 <body class="h-100">
+<img src='{!! asset("storage/app/public/assets/images/bg.jpg") !!}' class="bg-img" alt="">
+
     @if(session()->has('danger'))
         <div class="alert alert-danger" style="text-align: center;">
             {{ session()->get('danger') }}
@@ -24,8 +28,12 @@
                     <div class="form-input-content">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
-                                <a class="text-center" href="#"><center><img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" height="60" alt=""></center></a>
-
+                                    <center>
+                                        <img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" height="60" alt="" >
+                                    </center>
+                                <span class="headsign">
+                                    {{ trans('labels.admin') }}
+			                    </span>
                                 <form method="POST" class="mt-5 mb-5 login-input" action="{{ route('login') }}">
                                     @csrf
 

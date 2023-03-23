@@ -13,6 +13,7 @@ return [
     "home" => "Home",
     "our_products" => "Our Products",
     "login" => "MASUK",
+    "admin" => "ADMIN",
     "lupa_password" => "Lupa Password",
     "send"=>"Kirim",
     "view_more" => "View More",
