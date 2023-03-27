@@ -14,8 +14,6 @@
 </head>
 
 <body class="h-100">
-<img src='{!! asset("storage/app/public/assets/images/bg.jpg") !!}' class="bg-img" alt="">
-
     @if(session()->has('danger'))
         <div class="alert alert-danger" style="text-align: center;">
             {{ session()->get('danger') }}
@@ -31,9 +29,6 @@
                                     <center>
                                         <img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" height="60" alt="" >
                                     </center>
-                                <span class="headsign">
-                                    {{ trans('labels.admin') }}
-			                    </span>
                                 <form method="POST" class="mt-5 mb-5 login-input" action="{{ route('login') }}">
                                     @csrf
 
@@ -58,7 +53,7 @@
                                     </div>
 
                                     <button type="submit" class="btn login-form__btn submit w-100">
-                                        {{ __('Login') }}
+                                    {{ trans('labels.admin') }}
                                     </button>
                                 </form>
                             </div>
