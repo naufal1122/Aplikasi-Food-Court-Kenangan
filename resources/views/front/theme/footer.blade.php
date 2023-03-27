@@ -205,7 +205,7 @@ aria-hidden="true">
 <footer>
   <div class="container d-flex justify-content-between flex-wrap">
     <div class="footer-head">
-      <div class="footer-logo"><img src='{!! asset("storage/app/public/images/about/".@$getinfo->footer_logo) !!}' alt=""></div>
+      <div class="footer-logo"> <img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" alt=""></div>
       <p>{!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->about_content, ENT_QUOTES, 'UTF-8'), $limit = 200, $end = '...') !!}</p>
     </div>
     <div class="footer-socialmedia">

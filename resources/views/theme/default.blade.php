@@ -31,7 +31,9 @@
     ********************-->
     <div id="preloader">
         <div class="loader">
-            <img src="{!! asset('storage/app/public/front/images/loader.gif') !!}" style="width: 80px;">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
         </div>
     </div>
     <!--*******************
@@ -402,7 +404,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; Designed & Developed by <a href="https://infotechgravity.com/" target="_blank">Gravity Infotech</a> 2020</p>
+                <p>Copyright &copy; 2023 PBL Team TI UNS | <a href="#">Made With ❤️ Quixlab</a></p>
             </div>
         </div>
         <!--**********************************

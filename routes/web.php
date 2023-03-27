@@ -38,7 +38,14 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get('/405', 'HomeController@notallow');
 	Route::post('/home/contact', 'HomeController@contact');
 	Route::post('/home/checkpincode', 'HomeController@checkpincode');
-	
+
+	Route::get('/cart', 'CartController@index');
+	Route::post('/cart/qtyupdate','CartController@qtyupdate');
+	Route::post('/cart/applypromocode', 'CartController@applypromocode');
+	Route::post('/cart/deletecartitem', 'CartController@deletecartitem');
+	Route::post('/cart/removepromocode', 'CartController@removepromocode');
+	Route::get('/cart/isopenclose', 'CartController@isopenclose');
+	Route::get('/cart/checkitem', 'CartController@checkitem');
 
 	Route::get('/signin', 'UserController@index');
 	Route::post('/signin/login', 'UserController@login');
@@ -52,8 +59,13 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get('/otp-verify', 'UserController@otp_verify');
 	Route::get('/resend-otp', 'UserController@resend_otp');
 	Route::post('/otp-verification', 'UserController@otp_verification');
-	Route::get ('/logout', 'UserController@logout' );
 
+	Route::get('/address', 'UserController@address');
+	Route::post('/user/addaddress', 'UserController@addaddress');
+	Route::post('/user/editaddress', 'UserController@editaddress');
+	Route::post('/user/show', 'UserController@show');
+	Route::post('/user/delete', 'UserController@delete');
+	Route::get ('/logout', 'UserController@logout' );
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
@@ -64,6 +76,27 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 
 	Route::group(['middleware' => ['AdminAuth']],function(){
 		Route::get('home', 'AdminController@home');
+
+		Route::get('branches', 'BranchController@index');
+		Route::post('branches/store', 'BranchController@store');
+		Route::get('branches/list', 'BranchController@list');
+		Route::post('branches/show', 'BranchController@show');
+		Route::post('branches/update', 'BranchController@update');
+		Route::post('branches/status', 'BranchController@status');
+
+		Route::get('slider', 'SliderController@index');
+		Route::post('slider/store', 'SliderController@store');
+		Route::get('slider/list', 'SliderController@list');
+		Route::post('slider/show', 'SliderController@show');
+		Route::post('slider/update', 'SliderController@update');
+		Route::post('slider/destroy', 'SliderController@destroy');
+
+		Route::get('banner', 'BannerController@index');
+		Route::post('banner/store', 'BannerController@store');
+		Route::get('banner/list', 'BannerController@list');
+		Route::post('banner/show', 'BannerController@show');
+		Route::post('banner/update', 'BannerController@update');
+		Route::post('banner/destroy', 'BannerController@destroy');
 	});
 
 	Route::get('logout', 'AdminController@logout');

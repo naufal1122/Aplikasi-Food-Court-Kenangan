@@ -146,6 +146,7 @@ return [
     //Admin Sidebar
     "dashboard" => "Dashboard",
     "sliders" => "Sliders",
+    "slider" => "Slider",
     "items" => "Items",
     "addons" => "Add-ons",
     "banners" => "Banners",
