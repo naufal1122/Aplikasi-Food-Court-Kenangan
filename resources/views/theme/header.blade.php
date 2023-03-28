@@ -4,10 +4,9 @@
 <div class="nav-header">
     <div class="brand-logo">
         <a href="index.html">
-            <b class="logo-abbr"><img src="{!! asset('storage/app/public/assets/images/logos.png') !!}" alt="" > </b>
-            <span class="logo-compact"><img src="{!! asset('storage/app/public/assets/images/logos2.png') !!}" alt="" ></span>
+            <b class="logo-abbr"><img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" alt="" > </b>
             <span class="brand-title">
-                <img src="{!! asset('storage/app/public/assets/images/logos-text.png') !!}" alt="" >
+                <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" alt="" >
             </span>
         </a>
     </div>
