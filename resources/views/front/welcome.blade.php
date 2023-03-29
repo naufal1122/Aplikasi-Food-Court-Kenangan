@@ -1,4 +1,4 @@
-@include('front.theme.header')
+@include('front.theme.header_welcome')
 
 <section class="banner-sec">
     <div class="container-fluid px-0">
@@ -178,4 +178,4 @@
 <section class="card">
 </section>
 
-@include('front.theme.footer')
+@include('front.theme.footer_welcome')

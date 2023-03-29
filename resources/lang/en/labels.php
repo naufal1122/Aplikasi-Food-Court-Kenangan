@@ -10,8 +10,8 @@ return [
     */
 
     //WEBSITE
-    "home" => "Home",
-    "our_products" => "Our Products",
+    "home" => "Beranda",
+    "our_products" => "Menu Lengkap",
     "login" => "MASUK",
     "admin" => "ADMIN",
     "lupa_password" => "Lupa Password",
@@ -19,8 +19,8 @@ return [
     "view_more" => "View More",
     "about_us" => "About us",
     "our_review" => "Our Reviews",
-    "banner_title" => "Order food directly from your phone",
-    "banner_description" => "Search for Restaurant App in the App Store and Google Play Store. Enjoy your food on the go!",
+    "banner_title" => "Pesan makanan cukup dari ponsel anda!",
+    "banner_description" => "Tidak perlu lagi bingung untuk memesan makanan, cukup dengan ponsel anda, pesan makanan anda sekarang!",
     "contact_us" => "Contact us",
     "privacy_policy" => "Privacy Policy",
     "developed_by" => "Designed & Developed by Gravity Infotech.",
@@ -126,6 +126,8 @@ return [
     "other" => "Other",
     "edit" => "Edit",
     "delete" => "Delete",
+    "about_kenangan" => "Food Court Kenangan",
+    "list_tenant" => "Tenant",
 
     //Admin header
     "admin_title" => "Admin",
