@@ -68,7 +68,7 @@
 				</button>
 				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+						<li class="nav-item {{ request()->is('') ? 'active' : '' }}">
 							<a class="nav-link" href="{{URL::to('/')}}">{{ trans('labels.home') }}</a>
 						</li>
 						<li class="nav-item {{ request()->is('branch') ? 'active' : '' }}">
