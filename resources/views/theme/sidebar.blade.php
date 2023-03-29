@@ -40,13 +40,23 @@
                 </a>
             </li>
             <li>
-                <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
-                    <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.sliders') }}</span>
+                <a href="{{URL::to('/admin/banner')}}" aria-expanded="false">
+                    <i class="fa fa-bullhorn"></i><span class="nav-text">{{ trans('labels.menu') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{URL::to('/admin/banner')}}" aria-expanded="false">
-                    <i class="fa fa-bullhorn"></i><span class="nav-text">{{ trans('labels.banners') }}</span>
+                <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
+                    <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.promo') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/branches')}}" aria-expanded="false">
+                    <i class="fa fa-building-o"></i><span class="nav-text">{{ trans('labels.history') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
+                    <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.invoice') }}</span>
                 </a>
             </li>
         </ul>

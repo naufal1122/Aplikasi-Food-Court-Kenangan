@@ -149,11 +149,11 @@ return [
     "slider" => "Slider",
     "items" => "Items",
     "addons" => "Add-ons",
-    "banners" => "Banners",
+    "banners" => "Menu",
     "pincodes" => "Pincodes",
     "promocodes" => "Promocodes",
     "drivers" => "Drivers",
-    "branches" => "Branches",
+    "branches" => "Toko",
     "working_hours" => "Working Hours",
     "payment_methods" => "Payment Methods",
     "orders" => "Orders",
@@ -192,13 +192,16 @@ return [
     "view" => "View",
 
     //Slider
-    "slider" => "Slider",
+    "promo" => "Promo",
     "add_slider" => "Add slider",
     "all_sliders" => "All sliders",
     "add_new_slider" => "Add New Slider",
     "slider_title" => "Slider title",
     "image" => "Image",
     "edit_slider" => "Edit slider",
+    "menu" => "Menu",
+    "invoice" => "Invoice",
+    "history" => "History",
 
     //Category
     "category" => "Category",

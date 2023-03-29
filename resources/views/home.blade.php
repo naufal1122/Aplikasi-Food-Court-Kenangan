@@ -37,7 +37,7 @@
                 <div class="card gradient-2">
                     <a href="#">
                         <div class="card-body">
-                            <h3 class="card-title text-white">Sample Card</h3>
+                            <h3 class="card-title text-white">Promo</h3>
                             <div class="d-inline-block">
                                 <h2 class="text-white">0</h2>
                             </div>

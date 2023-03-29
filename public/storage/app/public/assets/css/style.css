@@ -25,16 +25,16 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 @import url(../plugins/metismenu/css/metisMenu.min.css);
 @import url(../plugins/bootstrap-select/dist/css/bootstrap-select.min.css);
 .gradient-1, .dropdown-mega-menu .ext-link.link-1 a, .morris-hover, .datamaps-hoverover {
-  background-image: linear-gradient(230deg, #7571f9, #7571f9); }
+  background-image: linear-gradient(230deg, #759bff, #843cf6); }
 
 .gradient-2, .dropdown-mega-menu .ext-link.link-3 a {
-  background-image: linear-gradient(230deg, #7571f9, #7571f9); }
+  background-image: linear-gradient(230deg, #fc5286, #fbaaa2); }
 
 .gradient-3, .dropdown-mega-menu .ext-link.link-2 a, .header-right .icons .user-img .activity {
-  background-image: linear-gradient(230deg,#7571f9, #7571f9); }
+  background-image: linear-gradient(230deg, #ffc480, #ff763b); }
 
 .gradient-4, .sidebar-right .nav-tabs .nav-item .nav-link.active::after, .sidebar-right .nav-tabs .nav-item .nav-link.active span i::before {
-  background-image: linear-gradient(230deg, #7571f9, #7571f9); }
+  background-image: linear-gradient(230deg, #0e4cfd, #6a8eff); }
 
 .gradient-5 {
   background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%); }
@@ -15029,6 +15029,7 @@ label input:checked+.cart-delivery-type-box {
 }
 
 .brand-title img{
-  width: 130px;
-  height: 45px;
+  width: 170px;
+  height: 60px;
+  margin-right: 10px;
 }
