@@ -188,7 +188,7 @@ aria-hidden="true">
                   <select name="branch" class="form-control" id="branch" required>
                       <option value="none">{{ trans('labels.select_branch') }}</option>
                       @foreach ($branch as $branchlist)
-                        <option value="{{$branchlist->id}}" branch_name="{{$branchlist->name}}" {{(@$_COOKIE['branch'] == $branchlist->id) ? 'selected' : '' }}>{{$branchlist->name}}</option>
+                        <option value="{{$branchlist->id}}" branch_name="{{$branchlist->name}}" {{(@$_COOKIE['branch'] == $branchlist->id) ? 'selected' :  '' }}>{{$branchlist->name}}</option>
                       @endforeach
                   </select>
                 </div>
