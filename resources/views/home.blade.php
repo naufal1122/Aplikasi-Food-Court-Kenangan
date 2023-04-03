@@ -21,6 +21,89 @@
             </div>
             @endif
             <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-2">
+                    <a href="{{URL::to('/admin/category')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.categories') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{count($getcategory)}}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-list-alt"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-1">
+                    <a href="{{URL::to('/admin/item')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.items') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{count($getitems)}}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-cutlery"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-4">
+                    <a href="{{URL::to('/admin/users')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.users') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{count($getusers)}}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-users"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-4">
+                    <a href="{{URL::to('/admin/orders')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.orders') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{count($getorders)}}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-shopping-cart"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-2">
+                    <a href="{{URL::to('/admin/promocode')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.promocodes') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{count($getpromocode)}}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-gift"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+           
+       
+            <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-3">
+                    <a href="{{URL::to('/admin/orders')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.earnings') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{Auth::user()->currency}}{{ number_format($order_total-$order_tax, 2) }}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-usd"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-4">
                     <a href="{{URL::to('/admin/banner')}}">
                         <div class="card-body">
@@ -33,47 +116,19 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-2">
-                    <a href="#">
-                        <div class="card-body">
-                            <h3 class="card-title text-white">Promo</h3>
-                            <div class="d-inline-block">
-                                <h2 class="text-white">0</h2>
-                            </div>
-                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-list-alt"></i></span>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ trans('labels.today_order') }}</h4>
+                        <div class="table-responsive" id="table-display">
+                            @include('theme.todayorderstable')
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-1">
-                    <a href="#">
-                        <div class="card-body">
-                            <h3 class="card-title text-white">Sample Card</h3>
-                            <div class="d-inline-block">
-                                <h2 class="text-white">0</h2>
-                            </div>
-                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-cutlery"></i></span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            @if (Auth::user()->type == "4") 
-                <div class="col-lg-3 col-sm-6">
-                    <div class="card gradient-3">
-                        <a href="{{URL::to('/admin/addons')}}">
-                            <div class="card-body">
-                                <h3 class="card-title text-white">Sample Card</h3>
-                                <div class="d-inline-block">
-                                    <h2 class="text-white">{{count($addons)}}</h2>
-                                </div>
-                                <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-plus"></i></span>
-                            </div>
-                        </a>
                     </div>
                 </div>
-            @endif
+            </div>
         </div>
     </div>
     <!-- Modal -->

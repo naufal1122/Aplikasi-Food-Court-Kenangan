@@ -78,6 +78,11 @@
                         <form method="post" id="change_password_form">
                         {{csrf_field()}}
                           <div class="modal-body">
+                            <label>{{ trans('labels.branch_name') }} </label>
+                            <div class="form-group">
+                                <input type="text" placeholder="{{ trans('messages.enter_branch_name') }}" class="form-control" name="name" id="get_name" value="{{{Auth::user()->name}}}">
+                            </div>
+
                             <label>{{ trans('labels.email') }} </label>
                             <div class="form-group">
                                 <input type="email" placeholder="{{ trans('messages.enter_email') }}" class="form-control" name="email" id="email" value="{{{Auth::user()->email}}}">

@@ -86,9 +86,6 @@
 							<li class="nav-item {{ request()->is('favorite') ? 'active' : '' }}">
 								<a class="nav-link" href="{{URL::to('/favorite')}}">{{ trans('labels.favourite_list') }}</a>
 							</li>
-							<li class="nav-item {{ request()->is('wallet') ? 'active' : '' }}">
-								<a class="nav-link" href="{{URL::to('/wallet')}}">{{ trans('labels.my_wallet') }}</a>
-							</li>
 							<li class="nav-item search">
 								<form method="get" action="{{URL::to('/search')}}">
 									<div class="search-input">
@@ -97,9 +94,6 @@
 									<button type="submit" class="nav-link"><i class="far fa-search"></i></button>
 								</form>
 								<div id="countryList" class="item-list"></div>
-							</li>
-							<li class="nav-item" style="width: 40px;">
-								<a class="nav-link" href="#" data-toggle="modal" data-target="#branchlist"><i class="fa fa-location-arrow" aria-hidden="true"></i></a>
 							</li>
 							<li class="nav-item cart-btn">
 								<a class="nav-link" href="{{URL::to('/cart')}}"><i class="fas fa-shopping-cart"></i><span id="cartcnt">{{Session::get('cart')}}</span></a>

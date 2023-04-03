@@ -11,6 +11,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{URL::to('/admin/branches')}}" aria-expanded="false">
+                    <i class="fa fa-building-o"></i><span class="nav-text">{{ trans('labels.branches') }}</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
                     <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.sliders') }}</span>
                 </a>
@@ -21,8 +26,8 @@
                 </a>
             </li>
             <li>
-                <a href="{{URL::to('/admin/branches')}}" aria-expanded="false">
-                    <i class="fa fa-building-o"></i><span class="nav-text">{{ trans('labels.branches') }}</span>
+                <a href="{{URL::to('/admin/category')}}" aria-expanded="false">
+                    <i class="icon-menu menu-icon"></i><span class="nav-text">{{ trans('labels.categories') }}</span>
                 </a>
             </li>
         </ul>
@@ -40,25 +45,23 @@
                 </a>
             </li>
             <li>
+                <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
+                    <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.sliders') }}</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{URL::to('/admin/banner')}}" aria-expanded="false">
-                    <i class="fa fa-bullhorn"></i><span class="nav-text">{{ trans('labels.menu') }}</span>
+                    <i class="fa fa-bullhorn"></i><span class="nav-text">{{ trans('labels.banners') }}</span>
                 </a>
             </li>
             <li>
-                <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
-                    <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.promo') }}</span>
+                <a href="{{URL::to('/admin/category')}}" aria-expanded="false">
+                    <i class="icon-menu menu-icon"></i><span class="nav-text">{{ trans('labels.categories') }}</span>
                 </a>
             </li>
-            <li>
-                <a href="{{URL::to('/admin/branches')}}" aria-expanded="false">
-                    <i class="fa fa-building-o"></i><span class="nav-text">{{ trans('labels.history') }}</span>
-                </a>
-            </li>
-            <li>
-                <a href="{{URL::to('/admin/slider')}}" aria-expanded="false">
-                    <i class="fa fa-image"></i><span class="nav-text">{{ trans('labels.invoice') }}</span>
-                </a>
-            </li>
+            
+            
+         
         </ul>
     </div>
 </div>

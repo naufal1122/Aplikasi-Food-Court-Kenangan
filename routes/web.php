@@ -77,6 +77,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 
 	Route::group(['middleware' => ['AdminAuth']],function(){
 		Route::get('home', 'AdminController@home');
+		Route::post('changePassword', 'AdminController@changePassword');
+		Route::post('settings', 'AdminController@settings');
 
 		Route::get('branches', 'BranchController@index');
 		Route::post('branches/store', 'BranchController@store');
@@ -98,6 +100,17 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('banner/show', 'BannerController@show');
 		Route::post('banner/update', 'BannerController@update');
 		Route::post('banner/destroy', 'BannerController@destroy');
+
+		Route::get('settings', 'AboutController@index');
+		Route::post('about/update', 'AboutController@update');
+
+		Route::get('category', 'CategoryController@index');
+		Route::post('category/store', 'CategoryController@store');
+		Route::get('category/list', 'CategoryController@list');
+		Route::post('category/show', 'CategoryController@show');
+		Route::post('category/update', 'CategoryController@update');
+		Route::post('category/status', 'CategoryController@status');
+		Route::post('category/delete', 'CategoryController@delete');
 	});
 
 	Route::get('logout', 'AdminController@logout');
