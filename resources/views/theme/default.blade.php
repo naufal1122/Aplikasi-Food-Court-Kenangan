@@ -409,7 +409,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; 2023 PBL Team TI UNS | <a href="#">Made With ❤️ Quixlab</a></p>
+                <p>Copyright &copy; 2023 PBL Team TI UNS | <a href="#">❤️ Quixlab</a></p>
             </div>
         </div>
         <!--**********************************

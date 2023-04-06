@@ -179,8 +179,8 @@ aria-hidden="true">
     <div class="modal-content">
         <div class="modal-body">
           <div class="col-lg-12">
-                  <img src='{!! asset("storage/app/public/images/about/".@$getinfo->logo) !!}' class="img-responsive center-block d-block mx-auto" alt="Sample Image" width="300px">
-              </div>
+              <img src="{!! asset('storage/app/public/assets/images/logo6.png') !!}" alt="" class="img-responsive center-block d-block mx-auto" width="180" height="180">
+            </div>
           <h3 class="hidden-xs mt-5" style="text-align: center;"><strong>{{ trans('labels.select_near_branch') }}</strong></h3>
           <h3 id="invalid_msg" style="color: red; text-align: center;"></h3>
             <div class="row">
@@ -205,7 +205,7 @@ aria-hidden="true">
 <footer>
   <div class="container d-flex justify-content-between flex-wrap">
     <div class="footer-head">
-      <div class="logo-compact" href="{{URL::to('/')}}"> <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" width="270" height="80" alt=""></div>
+      <div class="logo-compact" href="{{URL::to('/')}}"> <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" width="250" height="80" alt="" ></div>
       <p></p>
     </div>
   </div>

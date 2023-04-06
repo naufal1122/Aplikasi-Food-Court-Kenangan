@@ -307,7 +307,7 @@ img {
   color: #fff;
   display: block;
   font-size: 50px;
-  line-height: 40px;
+  line-height: 26px;
   border-radius: 100%;
   background-color: var(--primary-color-hover);
 }
@@ -625,7 +625,7 @@ img {
 .review-carousel .owl-nav span,
 #sync2 .owl-nav span {
   font-size: 38px;
-  line-height: 30px;
+  line-height: 20px;
   display: block;
   width: 30px;
   height: 30px;

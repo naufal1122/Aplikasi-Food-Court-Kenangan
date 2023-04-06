@@ -60,6 +60,7 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get('/otp-verify', 'UserController@otp_verify');
 	Route::get('/resend-otp', 'UserController@resend_otp');
 	Route::post('/otp-verification', 'UserController@otp_verification');
+	
 
 	Route::get('/address', 'UserController@address');
 	Route::post('/user/addaddress', 'UserController@addaddress');
@@ -67,6 +68,9 @@ Route::group(['namespace' => 'front'], function () {
 	Route::post('/user/show', 'UserController@show');
 	Route::post('/user/delete', 'UserController@delete');
 	Route::get ('/logout', 'UserController@logout' );
+
+	Route::get('/aboutus', 'AboutController@index');
+	Route::get('/about', 'AboutController@about');
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
@@ -111,6 +115,40 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('category/update', 'CategoryController@update');
 		Route::post('category/status', 'CategoryController@status');
 		Route::post('category/delete', 'CategoryController@delete');
+
+		Route::get('ingredients', 'IngredientsController@index');
+		Route::post('ingredients/store', 'IngredientsController@store');
+		Route::get('ingredients/list', 'IngredientsController@list');
+		Route::post('ingredients/show', 'IngredientsController@show');
+		Route::post('ingredients/update', 'IngredientsController@update');
+		Route::post('ingredients/status', 'IngredientsController@status');
+		Route::post('ingredients/delete', 'IngredientsController@delete');
+
+		Route::get('item', 'ItemController@index');
+		Route::get('additem', 'ItemController@additem');
+		Route::get('edititem/{id}', 'ItemController@edititem');
+		Route::post('item/store', 'ItemController@store');
+		Route::get('item/list', 'ItemController@list');
+		Route::post('item/update', 'ItemController@update');
+		Route::post('item/showimage', 'ItemController@showimage');
+		Route::post('item/updateimage', 'ItemController@updateimage');
+		Route::post('item/storeimages', 'ItemController@storeimages');
+		Route::post('item/destroyimage', 'ItemController@destroyimage');
+		Route::post('item/status', 'ItemController@status');
+		Route::post('item/delete', 'ItemController@delete');
+		Route::post('item/deletevariation', 'ItemController@deletevariation');
+
+		Route::get('addons', 'AddonsController@index');
+		Route::post('addons/getitem', 'AddonsController@getitem');
+		Route::post('addons/store', 'AddonsController@store');
+		Route::get('addons/list', 'AddonsController@list');
+		Route::post('addons/show', 'AddonsController@show');
+		Route::post('addons/update', 'AddonsController@update');
+		Route::post('addons/status', 'AddonsController@status');
+		Route::post('addons/delete', 'AddonsController@delete');
+
+		Route::get('settings', 'AboutController@index');
+		Route::post('about/update', 'AboutController@update');
 	});
 
 	Route::get('logout', 'AdminController@logout');

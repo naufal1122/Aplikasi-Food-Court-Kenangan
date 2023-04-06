@@ -67,14 +67,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="pro-box">
                                 <div class="pro-img">
-                                    @foreach ($item->variation as $key => $value)
-                                        @if($value->sale_price > 0)
-                                            <div class="ribbon-wrapper">
-                                                <div class="ribbon">ON SALE</div>
-                                            </div>
-                                        @endif
-                                        @break
-                                    @endforeach
+                                    
                                     <a href="{{URL::to('product-details/'.$item->id)}}">
                                         <img src='{{$item["itemimage"]->image }}' alt="">
                                     </a>
@@ -126,32 +119,15 @@
                 <img src='{!! asset("storage/app/public/images/about/".@$getabout->image) !!}' alt="">
             </div>
             <div class="about-contant">
-                <h2 class="sec-head text-left">{{ trans('labels.about_us') }}</h2>
+                <h2 class="sec-head text-left">Tentang Tenant Kami</h2>
                 <p>{!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->about_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="review-sec">
-    <div class="container">
-        <h2 class="sec-head">{{ trans('labels.our_review') }}</h2>
-        <div class="review-carousel owl-carousel owl-theme">
-            @foreach($getreview as $review)
-            <div class="item">
-                <div class="review-profile">
-                    <img src='{!! asset("storage/app/public/images/profile/".$review["users"]->profile_image) !!}' alt="">
-                </div>
-                <h3>{{$review['users']->name}}</h3>
-                <p>{{$review->comment}}</p>
-            </div>
-            @endforeach
-        </div>
 
-    </div>
-</section>
-
-<section class="our-app">
+<!--<section class="our-app">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -175,7 +151,23 @@
     </div>
 </section>
 
-<section class="card">
+
+<!--<section class="review-sec">
+    <div class="container">
+        <h2 class="sec-head">{{ trans('labels.our_review') }}</h2>
+        <div class="review-carousel owl-carousel owl-theme">
+            @foreach($getreview as $review)
+            <div class="item">
+                <div class="review-profile">
+                    <img src='{!! asset("storage/app/public/images/profile/".$review["users"]->profile_image) !!}' alt="">
+                </div>
+                <h3>{{$review['users']->name}}</h3>
+                <p>{{$review->comment}}</p>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </section>
+-->
 
 @include('front.theme.footer')

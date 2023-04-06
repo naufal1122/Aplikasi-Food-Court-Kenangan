@@ -30,6 +30,28 @@
                     <i class="icon-menu menu-icon"></i><span class="nav-text">{{ trans('labels.categories') }}</span>
                 </a>
             </li>
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-coffee"></i><span class="nav-text">{{ trans('labels.itemss') }}</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/item')}}">{{ trans('labels.items') }}</a></li>
+                </ul>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/addons')}}">{{ trans('labels.addons') }}</a></li>
+                </ul>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/ingredients')}}">{{ trans('labels.ingredients') }}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-cog"></i><span class="nav-text">{{ trans('labels.cms_pagess') }}</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/settings')}}">{{ trans('labels.about_settingss') }}</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>
@@ -59,9 +81,28 @@
                     <i class="icon-menu menu-icon"></i><span class="nav-text">{{ trans('labels.categories') }}</span>
                 </a>
             </li>
-            
-            
-         
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-coffee"></i><span class="nav-text">{{ trans('labels.itemss') }}</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/item')}}">{{ trans('labels.items') }}</a></li>
+                </ul>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/addons')}}">{{ trans('labels.addons') }}</a></li>
+                </ul>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/ingredients')}}">{{ trans('labels.ingredients') }}</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                    <i class="fa fa-cog"></i><span class="nav-text">{{ trans('labels.cms_pages') }}</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/settings')}}">{{ trans('labels.about_settings') }}</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </div>

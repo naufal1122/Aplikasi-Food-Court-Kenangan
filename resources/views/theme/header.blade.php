@@ -3,8 +3,9 @@
 ***********************************-->
 <div class="nav-header">
     <div class="brand-logo">
-        <a href="index.html">
+        <a href="#">
             <b class="logo-abbr"><img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" alt="" > </b>
+            <span class="logo-compact"><img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" alt=""></span>
             <span class="brand-title">
                 <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" alt="" >
             </span>
@@ -57,13 +58,17 @@
                 <li class="icons dropdown">
                     <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
                         <span class="activity active"></span>
+                        @if (Auth::user()->type == "1")
                         <img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" height="40" width="40" alt="">
+                        @endif
+                        @if (Auth::user()->type == "4")
+                        <img src="{{Auth::user()->profile_image}}" height="40" width="40" alt="">
+                        @endif
                     </div>
                     <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                         <div class="dropdown-content-body">
                             <ul>
                                 <li><a href="javascript:void(0);" data-toggle="modal" data-target="#ChangePasswordModal"><i class="icon-key"></i> <span>{{ trans('labels.edit_profile') }}</span></a></li>
-                                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#Selltings"><i class="fa fa-cog" aria-hidden="true"></i> <span>{{ trans('labels.settings') }}</span></a></li>
                                 <li><a href="{{URL::to('/admin/logout')}}"><i class="icon-logout"></i> <span>{{ trans('labels.logout') }}</span></a></li>
                             </ul>
                         </div>
