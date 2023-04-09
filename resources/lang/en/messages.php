@@ -10,12 +10,12 @@ return [
     */
 
     //Response messages
-    "promocode" => "Promocode is required",
+    "promocode" => "Kode Promo diperlukan!",
     "once_per_user" => "The Offer Is Applicable Only Once Per User",
-    "promocode_applied" => "Promocode has been applied",
+    "promocode_applied" => "Kode Promo telah diterapkan",
     "wrong_promocode" => "You applied wrong Promocode",
     "promocode_removed" => "Promocode has been removed",
-    "wrong" => "Something went wrong.",
+    "wrong" => "Kesalahan, mohon ulangi.",
     "cannot_delete" => "You can not delete this variation",
     "cart_id_required" => "Cart data is required",
     "item_required" => "Item is required",
@@ -98,10 +98,10 @@ return [
 
 
     //Alerts
-    "are_you_sure" => "Are you sure?",
-    "record_safe" => "Your record is safe",
-    "yes" => "Yes",
-    "no" => "No",
+    "are_you_sure" => "Apakah Anda yakin?",
+    "record_safe" => "Perintah dibatalkan, data Anda aman",
+    "yes" => "Ya",
+    "no" => "Tidak",
 
     //Placeholders
     "enter_old_password" => "Enter old password",

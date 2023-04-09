@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ trans('labels.admin_title') }}</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{!! asset('storage/app/public/assets/images/favicon.png') !!}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{!! asset('storage/app/public/assets/images/logo6.png') !!}">
     <!-- Pignose Calender -->
     <link href="{!! asset('storage/app/public/assets/plugins/pg-calendar/css/pignose.calendar.min.css') !!}" rel="stylesheet">
     <!-- Chartist -->

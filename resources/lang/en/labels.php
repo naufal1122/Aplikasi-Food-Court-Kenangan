@@ -279,8 +279,8 @@ return [
     "email" => "Email",
     "password" => "Password",
     "profile_image" => "Profile image",
-    "block" => "Block",
-    "unblock" => "Unblock",
+    "block" => "Nonaktifkan",
+    "unblock" => "Aktifkan",
 
     //Branches
     "add_branch" => "Tambah Tenant",
