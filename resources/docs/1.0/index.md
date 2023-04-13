@@ -3,7 +3,7 @@
     - [Resource](/{{route}}/{{version}}/resource)
     - [Database](/{{route}}/{{version}}/database)
 
-- ## Desain UI / UX
+- ## Screenshot Aplikasi
     - [Landing Page](/{{route}}/{{version}}/landingUi)
     - [Dashboard](/{{route}}/{{version}}/dashboardUi)
     - [Autentikasi](/{{route}}/{{version}}/authUi)
@@ -15,3 +15,7 @@
 
 - ## Getting Started with Code
     - [Routing](/{{route}}/{{version}}/routing)
+    - [Controller](/{{route}}/{{version}}/controller)
+    - [Model](/{{route}}/{{version}}/model)
+    - [View](/{{route}}/{{version}}/view)
+    - [Storage](/{{route}}/{{version}}/storage)

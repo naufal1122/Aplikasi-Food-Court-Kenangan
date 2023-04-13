@@ -1,39 +1,26 @@
-<?php
+# Routing
 
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use Spatie\Permission\Contracts\Role;
+---
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+- [Routing](#section-1)
+- [Routing Group](#section-2)
+- [Namespace Front](#section-3)
+- [Namespace Admin](#section-4)
 
-Route::get('/', function () {
-    return view('front.home');
-});
+<a name="section-1"></a>
+## Routing
 
+Routing adalah proses menghubungkan antara URL dan fungsi yang akan dijalankan. Routing dapat dilakukan dengan menggunakan fungsi `Route::get()`, `Route::post()`, `Route::put()`, `Route::patch()`, `Route::delete()`, dan `Route::options()`.
 
-Route::get('/clear-cache', function() {
-    Artisan::call('cache:clear');
-    return "Cache is cleared";
-});
+<a name="section-2"></a>
+## Routing Group
 
-Route::get('auth/facebook', 'Auth\SocialController@redirectToFacebook');
-Route::get('auth/facebook/callback', 'Auth\SocialController@handleFacebookCallback');
+Project ini telah dilengkapi dengan metode routing grup, yaitu routing yang memiliki prefix yang sama. Routing grup di project ini yaitu `Route::group(['prefix' => 'admin'], function () { ... })` `Route::group(['prefix' => 'front'], function () { ... })`. Routing grup ini akan menambahkan `admin` atau  `front`  pada setiap URL yang ada di dalamnya.
 
-Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
-Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
+<a name="section-3"></a>
+## Grup Front
 
-Route::post('auth', 'HomeController@auth');
-
+```php
 Route::group(['namespace' => 'front'], function () {
 	Route::get('/', 'HomeController@index');
 	Route::get('/405', 'HomeController@notallow');
@@ -80,7 +67,12 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get('/aboutus', 'AboutController@index');
 	Route::get('/about', 'AboutController@about');
 });
+```
 
+<a name="section-4"></a>
+## Grup Admin
+
+```php
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 	
 	Route::get('/', function () {
@@ -161,8 +153,4 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 
 	Route::get('logout', 'AdminController@logout');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
+```

@@ -4,13 +4,17 @@
 
 - [Bahasa Pemrograman](#section-1)
 - [Package](#section-2)
-- [Kebutuhan Fungsional](#section-3)
+- [Library JS](#section-3)
+- [Library Fonts Icons](#section-4)
+- [Kebutuhan Fungsional](#section-5)
 
 <a name="section-1"></a>
+
 ## Bahasa Pemrograman
-PHP with Laravel Framework (9.0)
+PHP with <a href="https://laravel.com" target="_blank">Laravel</a> Framework (9.0) and <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> 4 CSS Framework
 
 <a name="section-2"></a>
+
 ## Package
 Based on our requirements
         - "php": "^7.2.5|^8.0",
@@ -28,9 +32,32 @@ Based on our requirements
         - "stripe/stripe-php": "^7.67",
         - "twilio/sdk": "^6.27"
 
-        # Fitur
-
 <a name="section-3"></a>
+
+## JS Jquery
+Based on our requirements
+        - "jquery": "^3.5.1",
+        - "jquery-clockpicker ": "^0.0.7",
+        - "jquery-asColor": "^0.5.1",
+        - "jquery-asGradient": "^0.5.1",
+        - "jquery-asColorPicker": "^0.5.1",
+        - "jquery.dataTables": "^1.10.22",
+        - "sweetalert2": "^10.15.5",
+        - "datatables.net": "^1.10.22",
+
+<a name="section-4"></a>
+
+## Font Icons
+Based on our requirements
+        - "font-awesome": "^4.7.0",
+        - "ionicons": "^4.5.6",
+        - "material-design-iconic-font": "^2.2.0",
+        - "themify-icons": "^0.1.2",
+        - "Google Fonts": "https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans&display=swap",
+        - "Google Fonts": "https://fonts.googleapis.com/css?family=Domine&display=swap",
+
+
+<a name="section-5"></a>
 ## Kebutuhan Fungsional
 Tabel SRS
 

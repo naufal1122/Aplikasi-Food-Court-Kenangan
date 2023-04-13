@@ -923,6 +923,7 @@
 
 	.pro-box {
 		box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+		
 	}
 
 	.pro-img {
@@ -1110,7 +1111,9 @@
 
 	.pagination .page-item:first-child .page-link,
 	.pagination .page-item:last-child .page-link {
-		font-size: 36px;
+		font-size: 25px;
+		line-height: 23px;
+		padding-bottom: 30px;
 	}
 
 	.pagination .page-item {

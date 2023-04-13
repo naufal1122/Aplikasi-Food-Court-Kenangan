@@ -2,9 +2,10 @@
 
 :root {
   --primary-font: Plus Jakarta Sans, sans-serif;
+  --secondary-font: Domine, serif;
 
   /* Color */
-  --primary-color: #000;
+  --primary-color: #2f2f2f;
   --primary-bg-color: #f4f4f8;
 
   /* Hover Color */
@@ -58,8 +59,12 @@ a:hover {
 }
 
 h1,
-h2,
-h3,
+h2 {
+  font-family: var(--secondary-font);
+}
+h3 {
+  font-family: var(--secondary-font);
+}
 h4,
 h5 {
   color: var(--primary-color);
