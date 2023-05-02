@@ -1,6 +1,7 @@
 - ## Introduction
     - [Instalasi](/{{route}}/{{version}}/overview)
     - [Resource](/{{route}}/{{version}}/resource)
+    - [Repository](/{{route}}/{{version}}/repository)
     - [Database](/{{route}}/{{version}}/database)
 
 - ## Screenshot Aplikasi
@@ -19,3 +20,8 @@
     - [Model](/{{route}}/{{version}}/model)
     - [View](/{{route}}/{{version}}/view)
     - [Storage](/{{route}}/{{version}}/storage)
+
+- ## Testing
+    - [Testing untuk User](/{{route}}/{{version}}/blackbox)
+    - [Testing untuk Admin](/{{route}}/{{version}}/blackboxAdmin)
+    - [Testing untuk Super Admin](/{{route}}/{{version}}/blackboxSuperAdmin)

@@ -69,6 +69,7 @@
                         <div class="dropdown-content-body">
                             <ul>
                                 <li><a href="javascript:void(0);" data-toggle="modal" data-target="#ChangePasswordModal"><i class="icon-key"></i> <span>{{ trans('labels.edit_profile') }}</span></a></li>
+                                <li><a href="javascript:void(0);" data-toggle="modal" data-target="#Selltings"><i class="fa fa-cog" aria-hidden="true"></i> <span>{{ trans('labels.settings') }}</span></a></li>
                                 <li><a href="{{URL::to('/admin/logout')}}"><i class="icon-logout"></i> <span>{{ trans('labels.logout') }}</span></a></li>
                             </ul>
                         </div>

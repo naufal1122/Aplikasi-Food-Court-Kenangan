@@ -17,9 +17,8 @@ use Spatie\Permission\Contracts\Role;
 */
 
 Route::get('/', function () {
-    return view('front.home');
+     return view('front.home');
 });
-
 
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
