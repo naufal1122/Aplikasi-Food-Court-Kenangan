@@ -811,7 +811,7 @@
 	}
 
 	.sec-head {
-		font-size: 26px;
+		font-size: 24px;
 	}
 
 	.banner-contant h1 {
@@ -883,11 +883,11 @@
 
 	.banner-contant p {
 		line-height: 1.2;
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 	.banner-contant h1 {
-		font-size: 28px;
+		font-size: 26px;
 	}
 
 	.navbar-brand {
@@ -932,11 +932,11 @@
 	}
 
 	.product-details h4 {
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	.product-details .pro-pricing {
-		font-size: 20px;
+		font-size: 18px;
 	}
 
 	.product-details .btn {
@@ -1080,7 +1080,7 @@
 	}
 
 	.btn-wrap {
-		top: 44px;
+		top: 41px;
 	}
 
 	.cat-check {
@@ -1098,7 +1098,7 @@
 	}
 
 	.product-details p {
-		font-size: 12px;
+		font-size: 14px;
 		padding-right: 0;
 	}
 

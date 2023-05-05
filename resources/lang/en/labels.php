@@ -16,7 +16,7 @@ return [
     "admin" => "MASUK",
     "lupa_password" => "Verifikasi Kode",
     "send"=>"Kirim",
-    "view_more" => "View More",
+    "view_more" => "Selengkapnya",
     "about_us" => "Our Tenant",
     "our_review" => "Our Reviews",
     "banner_title" => "Pesan makanan cukup dari ponsel anda!",

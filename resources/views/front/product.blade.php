@@ -4,7 +4,7 @@
     <div class="container">
         <div class="product-rev-wrap">
             <div class="cat-aside">
-                <h3 class="text-center">{{ trans('labels.categories') }}</h3>
+                
                 <div class="cat-aside-wrap">
                     @foreach ($getcategory as $category)
                     <a href="{{URL::to('/product/'.$category->id)}}" class="cat-check border-top-no @if (request()->id == $category->id) active @endif">
@@ -33,9 +33,6 @@
                             <div class="pro-img">
                                 @foreach ($item->variation as $key => $value)
                                     @if($value->sale_price > 0)
-                                        <div class="ribbon-wrapper">
-                                            <div class="ribbon">ON SALE</div>
-                                        </div>
                                     @endif
                                     @break
                                 @endforeach

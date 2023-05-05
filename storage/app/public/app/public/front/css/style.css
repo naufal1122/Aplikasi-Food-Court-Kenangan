@@ -10,7 +10,7 @@
 
   /* Hover Color */
   --primary-color-hover: #6C6BBF;
-  --primary-bg-color-hover: #000;
+  --primary-bg-color-hover: #181818;
 
   /* --secondary-color: #000; */
 }
@@ -459,7 +459,7 @@ img {
   font-size: 18px;
   line-height: 1.4;
   margin-top: 10px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 #sync2 .owl-stage {
@@ -496,7 +496,7 @@ img {
 }
 
 .current .product-tab {
-  color: #000;
+  color: #181818;
   border-color: var(--primary-color-hover);
   background-color: #6C6BBF1c;
 }
@@ -1096,7 +1096,7 @@ footer {
 
 .cat-aside h3 {
   margin: 19px 0;
-  font-size: 26px;
+  font-size: 22px;
 }
 
 .cat-check img {
@@ -1108,7 +1108,7 @@ footer {
 }
 
 .cat-check p {
-  color: #000;
+  color: #181818;
   font-weight: 500;
 }
 
@@ -1122,6 +1122,7 @@ footer {
   font-size: 17px;
   margin-bottom: 0;
   transition: all 0.5s;
+  font-weight: 600;
   /*max-width: calc(100% - 60px);*/
 }
 
@@ -1846,7 +1847,7 @@ body .promo-modal.modal {
 
 .order-details-name a {
   display: block;
-  color: #000;
+  color: #181818;
 }
 
 .order-details-name a:hover h3 {
@@ -2393,7 +2394,7 @@ label input:checked+.cart-delivery-type-box {
 
 .product-details-sec .product-price {
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0;
   text-align: right;
   color: #6C6BBF;
@@ -2432,7 +2433,7 @@ label input:checked+.cart-delivery-type-box {
 
 .product-details-sec .pricing {
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0;
   text-align: right;
   color: #6C6BBF;
