@@ -20,6 +20,11 @@ Route::get('/', function () {
      return view('front.home');
 });
 
+//Landing Page//
+Route::get('/landing', function () {
+	return view('landingpage');
+});
+
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
     return "Cache is cleared";
