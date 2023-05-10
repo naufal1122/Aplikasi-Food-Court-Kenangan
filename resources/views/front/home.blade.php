@@ -7,8 +7,8 @@
             <div class="item">
                 <img src='{!! asset("storage/app/public/images/slider/".$slider->image) !!}' alt="">
                 <div class="banner-contant">
-                    <h1>{{$slider->title}}</h1>
-                    <p>{{$slider->description}}</p>
+                    <h2 class="sec-slider">{{$slider->title}}</h2>
+                    <h2 class="sec-sliderdesc">{{$slider->description}}</h3>
                 </div>
             </div>
             @endforeach

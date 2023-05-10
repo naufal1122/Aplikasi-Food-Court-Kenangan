@@ -69,6 +69,14 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get("/search","ItemController@search");
 	Route::post('product/searchitem', 'ItemController@searchitem');
 
+	Route::get('/cart', 'CartController@index');
+	Route::post('/cart/qtyupdate','CartController@qtyupdate');
+	Route::post('/cart/applypromocode', 'CartController@applypromocode');
+	Route::post('/cart/deletecartitem', 'CartController@deletecartitem');
+	Route::post('/cart/removepromocode', 'CartController@removepromocode');
+	Route::get('/cart/isopenclose', 'CartController@isopenclose');
+	Route::get('/cart/checkitem', 'CartController@checkitem');
+
 	Route::get('/address', 'UserController@address');
 	Route::post('/user/addaddress', 'UserController@addaddress');
 	Route::post('/user/editaddress', 'UserController@editaddress');
@@ -153,6 +161,13 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('addons/update', 'AddonsController@update');
 		Route::post('addons/status', 'AddonsController@status');
 		Route::post('addons/delete', 'AddonsController@delete');
+
+		Route::get('time', 'TimeController@index');
+		Route::post('time/store', 'TimeController@store');
+		Route::get('time/list', 'TimeController@list');
+		Route::post('time/show', 'TimeController@show');
+		Route::post('time/update', 'TimeController@update');
+		Route::post('time/destroy', 'TimeController@destroy');
 
 		Route::get('settings', 'AboutController@index');
 		Route::post('about/update', 'AboutController@update');

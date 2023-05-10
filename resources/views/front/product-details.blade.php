@@ -16,7 +16,7 @@
             </div>
             <div class="col-lg-7 pro-details-display">
                 <div class="pro-details-name-wrap">
-                    <h3 class="sec-head mt-0">{{$getitem->item_name}}</h3>
+                    <h3 class="sec-product mt-0">{{$getitem->item_name}}</h3>
                     @foreach ($getitem->variation as $key => $value)
                         <input type="hidden" name="price" id="price" value="{{$value->product_price}}">
                         @break
