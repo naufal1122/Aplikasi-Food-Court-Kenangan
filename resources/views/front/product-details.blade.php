@@ -123,8 +123,10 @@
                 <h3 class="sec-head">{{ trans('labels.description') }}</h3>
                 <p>{{$getitem->item_description}}</p>
 
+                <hr class="hr" />
+
                 @if (count($getingredients['value']) != 0)
-                <h3 class="sec-head">{{ trans('labels.ingredients') }}</h3>
+                <h2 class="sec-head text-center">{{ trans('labels.ingredients') }}</h2>
                     <div class="ingredients-carousel owl-carousel owl-theme">
                         @foreach ($getingredients['value'] as $ingredients)
                         <div class="item">
@@ -137,6 +139,8 @@
                 @endif
             </div>
 
+            <hr class="hr" />
+
             <div class="col-12">
                 <h2 class="sec-head text-center">{{ trans('labels.related_food') }}</h2>
                 <div class="pro-ref-carousel owl-carousel owl-theme">
@@ -146,9 +150,7 @@
                             <div class="pro-img">
                                 @foreach ($item->variation as $key => $value)
                                     @if($value->sale_price > 0)
-                                        <div class="ribbon-wrapper">
-                                            <div class="ribbon">ON SALE</div>
-                                        </div>
+                                        
                                     @endif
                                     @break
                                 @endforeach

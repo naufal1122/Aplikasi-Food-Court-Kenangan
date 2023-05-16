@@ -167,13 +167,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('addons/status', 'AddonsController@status');
 		Route::post('addons/delete', 'AddonsController@delete');
 
-		Route::get('time', 'TimeController@index');
-		Route::post('time/store', 'TimeController@store');
-		Route::get('time/list', 'TimeController@list');
-		Route::post('time/show', 'TimeController@show');
-		Route::post('time/update', 'TimeController@update');
-		Route::post('time/destroy', 'TimeController@destroy');
-
 		Route::get('settings', 'AboutController@index');
 		Route::post('about/update', 'AboutController@update');
 	});
