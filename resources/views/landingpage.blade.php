@@ -40,16 +40,16 @@
 <!-- Slider promo -->
     <div class="slider">
         <div class="slide">
-            <img src="gambar1.jpg" alt="">
+            <img src="{!! asset('storage/app/public/assets/images/gambar1.jpg') !!}" alt="">
         </div>
         <div class="slide">
-            <img src="gambar2.jpg" alt="">
+            <img src="{!! asset('storage/app/public/assets/images/gambar2.jpg') !!}" alt="">
         </div>
         <div class="slide">
-            <img src="gambar3.jpg" alt="">
+            <img src="{!! asset('storage/app/public/assets/images/gambar3.jpg') !!}" alt="">
         </div>
         <div class="slide">
-            <img src="gambar4.jpg" alt="">
+            <img src="{!! asset('storage/app/public/assets/images/gambar4.jpg') !!}" alt="">
         </div>
         <div class="navigation">
             <a class="prev" onclick="plusSlider(-1)">&#10094;</a>
@@ -62,26 +62,29 @@
             <div class="text-rekomendasi";>
                 Menu Rekomendasi Food Court Kenangan
             </div>
+            <div class="logo-rekomendasi">
+                <img src="{!! asset('storage/app/public/assets/images/logo-rekomendasi.png') !!}" alt="">
+            </div>
         </div> 
         <div class="product-container">
             <div class="product-card">
                 <div class="product-image">
-                    <img src="gambar1.jpg" class="product-thumb" alt="">
+                    <img src="{!! asset('storage/app/public/assets/images/gambar4.jpg') !!}" class="product-thumb" alt="">
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="gambar2.jpg" class="product-thumb" alt="">
+                    <img src="{!! asset('storage/app/public/assets/images/gambar1.jpg') !!}" class="product-thumb" alt="">
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="gambar3.jpg" class="product-thumb" alt="">
+                    <img src="{!! asset('storage/app/public/assets/images/gambar2.jpg') !!}" class="product-thumb" alt="">
                 </div>
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="gambar4.jpg" class="product-thumb" alt="">
+                    <img src="{!! asset('storage/app/public/assets/images/gambar3.jpg') !!}" class="product-thumb" alt="">
                 </div>
             </div>
             <div class="product-card">
