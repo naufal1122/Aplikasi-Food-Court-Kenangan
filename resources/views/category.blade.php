@@ -8,7 +8,7 @@
             <li class="breadcrumb-item"><a href="{{URL::to('/admin/home')}}">{{ trans('labels.dashboard') }}</a></li>
             <li class="breadcrumb-item active"><a href="javascript:void(0)">{{ trans('labels.categories') }}</a></li>
         </ol>
-        @if (Auth::user()->type == "1")
+        @if (Auth::user()->type == "4")
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCategory" data-whatever="@addCategory">{{ trans('labels.add_category') }}</button>
         @endif
         <!-- Add Category -->

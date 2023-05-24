@@ -74,6 +74,14 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get("/search","ItemController@search");
 	Route::post('product/searchitem', 'ItemController@searchitem');
 
+	Route::get('/cart', 'CartController@index');
+	Route::post('/cart/qtyupdate','CartController@qtyupdate');
+	Route::post('/cart/applypromocode', 'CartController@applypromocode');
+	Route::post('/cart/deletecartitem', 'CartController@deletecartitem');
+	Route::post('/cart/removepromocode', 'CartController@removepromocode');
+	Route::get('/cart/isopenclose', 'CartController@isopenclose');
+	Route::get('/cart/checkitem', 'CartController@checkitem');
+
 	Route::get('/address', 'UserController@address');
 	Route::post('/user/addaddress', 'UserController@addaddress');
 	Route::post('/user/editaddress', 'UserController@editaddress');

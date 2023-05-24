@@ -2,10 +2,10 @@
 
 :root {
   --primary-font: Plus Jakarta Sans, sans-serif;
-  --secondary-font: Domine, serif;
+  --secondary-font: Epilogue, sans-serif;
 
   /* Color */
-  --primary-color: #2f2f2f;
+  --primary-color: #292929;
   --primary-bg-color: #f4f4f8;
 
   /* Hover Color */
@@ -103,7 +103,37 @@ section {
   text-align: center;
   margin-bottom: 30px;
   font-size: 36px;
+  font-weight: 900;
+  color: #282828;
+}
+
+.sec-slider {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: #d4d4d4;
+}
+
+.sec-sliderdesc {
+  text-align: center;
+  font-size: 14px;
   font-weight: 600;
+  color: #d4d4d4;
+}
+
+.sec-product {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+  color: #343333;;
+}
+
+.sec-info {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 15px;
+  font-weight: 900;
+  color: #343333;;
 }
 
 .btn {
@@ -147,7 +177,7 @@ header.fixed {
 }
 
 .navbar .navbar-nav .nav-link {
-  margin: 0 15px;
+  margin: 0 6px;
   font-size: 16px;
   font-weight: 500;
   transition: all 0.5s;
@@ -490,15 +520,14 @@ img {
   padding: 8px 14px;
   border-radius: 6px;
   align-items: center;
-  background-color: #fff;
+  background-color: #6C6BBF1c;
   border: 1px solid transparent;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 }
 
 .current .product-tab {
   color: #181818;
-  border-color: var(--primary-color-hover);
-  background-color: #6C6BBF1c;
+  background-color: #fff;
 }
 
 .product-prev-sec .nav-pills .nav-link img {
@@ -574,7 +603,7 @@ img {
 }
 
 .about-contant p {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .product-prev-sec {
@@ -1090,7 +1119,7 @@ footer {
 }
 
 .cat-check.active {
-  border-color: var(--primary-color-hover);
+  border-color: #6c6bbf3a;
   background-color: #6C6BBF1c;
 }
 
@@ -1135,7 +1164,7 @@ footer {
 }
 
 .product-details .pro-pricing {
-  font-size: 21px;
+  font-size: 20px;
   padding-right: 0;
   text-align: right;
   color: #6C6BBF;
@@ -2231,7 +2260,6 @@ label input:checked+.cart-delivery-type-box {
   font-weight: 400;
   border-radius: 6px;
   padding: 10px 40px;
-  border: 3px solid #fff;
   background-color: #6C6BBF;
   transform: translateX(-50%);
   box-shadow: 0 0 4px var(--primary-color-hover);
@@ -2394,7 +2422,7 @@ label input:checked+.cart-delivery-type-box {
 
 .product-details-sec .product-price {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0;
   text-align: right;
   color: #6C6BBF;
@@ -2433,7 +2461,7 @@ label input:checked+.cart-delivery-type-box {
 
 .product-details-sec .pricing {
   font-size: 30px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0;
   text-align: right;
   color: #6C6BBF;

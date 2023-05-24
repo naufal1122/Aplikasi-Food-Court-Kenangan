@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" href="{{asset('storage/app/public/assets/css/fonts.css')}}">
     <link href="{{asset('storage/app/public/assets/css/style.css')}}" rel="stylesheet">
 
-    
 </head>
 
 <body class="h-100">

@@ -142,6 +142,7 @@
 			</div>
 		</nav>
 	</header>
+	
 	<!-- navbar -->
 	<div id="success-msg" class="alert alert-dismissible mt-3" style="display: none;">
 	    <span id="msg"></span>

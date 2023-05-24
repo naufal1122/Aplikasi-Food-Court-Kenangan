@@ -27,9 +27,9 @@ return [
     "download_app" => "Download the App",
     "submit" => "Submit",
     "categories" => "Kategori Menu",
-    "description" => "Description",
+    "description" => "Deskripsi",
     "ingredients" => "Bahan",
-    "related_food" => "Related products",
+    "related_food" => "Menu Terkait",
     "quality_food" => "Our Quality Food",
     "favourite_list" => "Favourite List",
     "my_orders" => "My Orders",
@@ -240,13 +240,13 @@ return [
     "sale_price" => "Harga penjualan",
 
     //Add-ons
-    "addons" => "Variasi",
-    "add_addons" => "Tambah Variasi",
-    "all_addons" => "List Semua Variasi",
-    "addons_name" => "Variasi",
+    "addons" => "Add - ons",
+    "add_addons" => "Tambah Add - ons",
+    "all_addons" => "List Semua Add - ons",
+    "addons_name" => "Add - ons",
     "free" => "Gratis",
     "paid" => "Bayar",
-    "edit_addons" => "Edit Variasi",
+    "edit_addons" => "Edit Add - ons",
 
     //Banner
     "banner" => "Banner",
