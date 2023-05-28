@@ -95,7 +95,7 @@
 
                         <p class="pro-total">{{ trans('labels.order_total') }} <span>{{$taxval->currency}}{{number_format($order_total, 2)}}</span></p>
                         <p class="pro-total">{{ trans('labels.tax') }} <span>{{$taxval->currency}}{{number_format($tax, 2)}}</span></p>
-                        <p class="pro-total" id="delivery_charge_hide">{{ trans('labels.delivery_charge') }}<span id="shipping_charge">{{$taxval->currency}}0.00</span></p>
+                        <!-- <p class="pro-total" id="delivery_charge_hide">{{ trans('labels.delivery_charge') }}<span id="shipping_charge">{{$taxval->currency}}0.00</span></p> -->
 
                         @if (Session::has('offer_amount'))
                             <p class="pro-total offer_amount">{{ trans('labels.discount') }} ({{Session::get('offer_code')}})</span>
@@ -121,29 +121,29 @@
                         <h4 class="sec-head openmsg mt-5" style="color: red; display: none;">Restaurant is closed.</h4>
 
                         <div class="cart-delivery-type open">
-                            <label for="cart-delivery">
+                            <!--<label for="cart-delivery">
                                 <input type="radio" name="cart-delivery" id="cart-delivery" checked value="1">
                                 <div class="cart-delivery-type-box">
                                     <img src="{!! asset('storage/app/public/front/images/pickup-truck.png') !!}" height="40" width="40" alt="">                                   
                                     <p>{{ trans('labels.delivery') }}</p>
                                 </div>
-                            </label>
+                            </label>-->
                             <label for="cart-pickup">
-                                <input type="radio" name="cart-delivery" id="cart-pickup" value="2">
+                                <input type="radio" name="cart-delivery" id="cart-pickup" checked value="2">
                                 <div class="cart-delivery-type-box">
-                                    <img src="{!! asset('storage/app/public/front/images/delivery.png') !!}" height="40" width="40" alt="">
+                                    <img src="{!! asset('storage/app/public/front/images/pickup-truck.png') !!}" height="40" width="40" alt="">
                                     <p>{{ trans('labels.pickup') }}</p>
                                 </div>
                             </label>
                         </div>
-                        <div class="select_add">
+                    <!-- <div class="select_add">
                             @if (!$addressdata->isEmpty())
                                 <p data-toggle="modal" data-target="#select_address" style="width: 50%;" class="btn">{{ trans('labels.select_address') }}</p>
                             @else
                                 <a href="{{URL::to('/address')}}" style="width: 50%;" class="btn">{{ trans('labels.select_address') }}</a>
                             @endif
                             
-                        </div>
+                        </div> -->
 
                         @if (!$addressdata->isEmpty())
                             <div class="promo-wrap open mt-3">
@@ -203,42 +203,12 @@
                             <input type="hidden" name="getpromo" id="getpromo" value="">
                         @endif
 
-                        <div class="mt-3">                            
-                            <button type="button" style="width: 100%;" class="btn open comman" onclick="WalletOrder()">{{ trans('labels.my_wallet') }} ({{$taxval->currency}}{{number_format($userinfo->wallet, 2)}})</button>
-                        </div>
-
                         @foreach($getpaymentdata as $paymentdata)
 
                             @if ($paymentdata->payment_name == "COD")
                                 <div class="mt-3">
                                     <button type="button" style="width: 100%;" class="btn open comman" onclick="CashonDelivery()">{{ trans('labels.cash_payment') }}</button>
                                 </div>
-                            @endif
-
-                            @if ($paymentdata->payment_name == "RazorPay")
-                                <div class="mt-3">
-                                    <button type="button" style="width: 100%;" class="btn buy_now open comman">{{ trans('labels.razorpay_payment') }}</button>
-                                </div>
-
-                                @if($paymentdata->environment=='1')
-                                    <input type="hidden" name="razorpay" id="razorpay" value="{{$paymentdata->test_public_key}}">
-                                @else
-                                    <input type="hidden" name="razorpay" id="razorpay" value="{{$paymentdata->live_public_key}}">
-                                @endif
-
-                            @endif
-
-                            @if ($paymentdata->payment_name == "Stripe")
-                                <div class="mt-3">
-                                    <button id="customButton" class="btn comman" style="display: none; width: 100%;">{{ trans('labels.stripe_payment') }}</button>
-                                    <button class="btn open stripe comman" style="width: 100%;" onclick="stripe()">{{ trans('labels.stripe_payment') }}</button>
-                                </div>
-
-                                @if($paymentdata->environment=='1')
-                                    <input type="hidden" name="stripe" id="stripe" value="{{$paymentdata->test_public_key}}">
-                                @else
-                                    <input type="hidden" name="stripe" id="stripe" value="{{$paymentdata->live_public_key}}">
-                                @endif
                             @endif
 
                         @endforeach

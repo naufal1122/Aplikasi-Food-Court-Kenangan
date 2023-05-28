@@ -47,9 +47,10 @@
 	********************-->
 	<div id="preloader" style="display: none;">
 	    <div class="loader">
-	        <img src="{!! asset('storage/app/public/front/images/loader.gif') !!}">
+	        <img src="{!! asset('storage/app/public/front/images/load-1110_128.gif') !!}">
 	    </div>
 	</div>
+	
 	<!--*******************
 	    Preloader end
 	********************-->

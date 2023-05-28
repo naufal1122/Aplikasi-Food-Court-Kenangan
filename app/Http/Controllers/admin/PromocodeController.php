@@ -1,0 +1,173 @@
+<?php
+
+namespace App\Http\Controllers\admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Promocode;
+use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
+
+class PromocodeController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        if (Auth::user()->type == "4") {
+            $getpromocode = Promocode::where('branch_id',Auth::user()->id)->where('is_available','1')->get();
+            $getbranch = [];
+        } else {
+            $getbranch = User::where('type','4')->get();
+            $getpromocode = Promocode::with('branch')->where('is_available','1')->get();
+        }
+        return view('promocode',compact('getpromocode','getbranch'));
+    }
+
+    public function list()
+    {
+        if (Auth::user()->type == "4") {
+            $getpromocode = Promocode::where('branch_id',Auth::user()->id)->where('is_available','1')->get();
+        } else {
+            $getpromocode = Promocode::with('branch')->where('is_available','1')->get();
+        }
+        return view('theme.promocodetable',compact('getpromocode'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $s
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $validation = Validator::make($request->all(),[
+          'offer_name' => 'required|unique:promocode',
+          'offer_code' => 'required|unique:promocode',
+          'offer_amount' => 'required',
+          'description' => 'required',
+          'branch_id' => 'required',
+        ]);
+        $error_array = array();
+        $success_output = '';
+        if ($validation->fails())
+        {
+            foreach($validation->messages()->getMessages() as $field_name => $messages)
+            {
+                $error_array[] = $messages;
+            }
+        }
+        else
+        {
+            $promocode = new Promocode;
+            $promocode->branch_id =$request->branch_id;
+            $promocode->offer_name =$request->offer_name;
+            $promocode->offer_code =$request->offer_code;
+            $promocode->offer_amount =$request->offer_amount;
+            $promocode->description =$request->description;
+            $promocode->save();
+            $success_output = 'Promocode Added Successfully!';
+        }
+        $output = array(
+            'error'     =>  $error_array,
+            'success'   =>  $success_output
+        );
+        echo json_encode($output);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Request $request)
+    {
+        $getpromocode = Promocode::where('id',$request->id)->first();
+        return response()->json(['ResponseCode' => 1, 'ResponseText' => 'Promocode fetch successfully', 'ResponseData' => $getpromocode], 200);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Request $req)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request)
+    {
+
+        $validation = Validator::make($request->all(),[
+          'getoffer_name' => 'required|unique:promocode,offer_name,' . $request->id,
+          'getoffer_code' => 'required|unique:promocode,offer_name,' . $request->id,
+          'getoffer_amount' => 'required',
+          'branch_id' => 'required',
+          'get_description' => 'required',
+        ]);
+
+        $error_array = array();
+        $success_output = '';
+        if ($validation->fails())
+        {
+            foreach($validation->messages()->getMessages() as $field_name => $messages)
+            {
+                $error_array[] = $messages;
+            }
+        }
+        else
+        {
+            $promocode = new Promocode;
+            $promocode->exists = true;
+            $promocode->id = $request->id;
+            $promocode->branch_id = $request->branch_id;
+            $promocode->offer_name =$request->getoffer_name;
+            $promocode->offer_code =$request->getoffer_code;
+            $promocode->offer_amount =$request->getoffer_amount;
+            $promocode->description =$request->get_description;
+            $promocode->save();           
+
+            $success_output = 'Promocode updated Successfully!';
+        }
+        $output = array(
+            'error'     =>  $error_array,
+            'success'   =>  $success_output
+        );
+        echo json_encode($output);
+    }
+
+    public function status(Request $request)
+    {
+        $promocode = Promocode::where('id', $request->id)->update( array('is_available'=>$request->status) );
+        if ($promocode) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}

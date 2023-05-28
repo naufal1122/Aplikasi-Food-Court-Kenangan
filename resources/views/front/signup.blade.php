@@ -71,12 +71,12 @@
             @if (Session::get('facebook_id') OR Session::get('google_id'))
                 <input type="text" name="name" placeholder="{{ trans('messages.enter_fullname') }}" class="w-100" value="{{Session::get('name')}}">
                 <input type="text" name="email" placeholder="{{ trans('messages.enter_email') }}" class="w-100" value="{{ Session::get('email') }}" readonly="">
-                <input type="hidden" id="countrys" name="country" value="91" />
+                <input type="hidden" id="countrys" name="country" value="62" />
                 <input name="mobile" type="text" class="w-100" id="mobiles" placeholder="{{ trans('messages.enter_mobile') }}" value="{{ old('mobile') }}"/>
             @else
                 <input type="text" name="name" placeholder="{{ trans('messages.enter_fullname') }}" class="w-100" value="{{ old('name') }}">
                 <input type="text" name="email" placeholder="{{ trans('messages.enter_email') }}" class="w-100" value="{{ old('email') }}">
-                <input type="hidden" id="country" name="country" value="91" />
+                <input type="hidden" id="country" name="country" value="62" />
                 <input type="text" name="mobile" id="mobile" placeholder="{{ trans('messages.enter_mobile') }}" class="w-100" value="{{ old('mobile') }}">
                 <input type="password" name="password" placeholder="{{ trans('messages.enter_password') }}" class="w-100">
                 <input type="password" name="password_confirmation" placeholder="{{ trans('messages.enter_confirm_password') }}" class="w-100">

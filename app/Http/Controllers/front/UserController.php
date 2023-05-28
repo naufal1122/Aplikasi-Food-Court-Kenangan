@@ -152,7 +152,6 @@ class UserController extends Controller
                             $res->google_id =Session::get('google_id');
                         }
                         $res->type ='2';
-                        $res->otp =$otp;
                         $res->referral_code =$referral_code;
                         $res->save();
 
@@ -161,14 +160,11 @@ class UserController extends Controller
                         $title=trans('messages.email_code');
                         $email=$request->email;
                         $logo=$getlogo->logo;
-                        $data=['title'=>$title,'email'=>$email,'otp'=>$otp,'logo'=>$logo];
+                        $data=['title'=>$title,'email'=>$email,'logo'=>$logo];
 
-                        Mail::send('Email.emailverification',$data,function($message)use($data){
-                            $message->from(env('MAIL_USERNAME'))->subject($data['title']);
-                            $message->to($data['email']);
-                        } );
                         
-                        User::where('email', $request->email)->update(['otp'=>$otp,'mobile'=>$request->mobile,'referral_code'=>$referral_code]);
+                        
+                        User::where('email', $request->email)->update(['mobile'=>$request->mobile,'referral_code'=>$referral_code]);
 
                         if ($request['referral_code'] != "") {
                             $getdata=User::select('referral_amount')->where('type','1')->get()->first();
@@ -208,17 +204,46 @@ class UserController extends Controller
                             }
                         }
 
+                        $checkuser=User::where('email',$request->email)->first();
+            $getdata=User::select('referral_amount')->where('type','1')->first();
+
+            if (!empty($checkuser)) {
+                if ($checkuser->otp == $request->otp) {
+                    $update=User::where('email',$request['email'])->update(['otp'=>NULL,'is_verified'=>'1']);
+
+                    $cart=Cart::where('user_id',$checkuser->id)->count();
+                    session ( [ 
+                        'id' => $checkuser->id, 
+                        'name' => $checkuser->name,
+                        'email' => $checkuser->email,
+                        'mobile' => $checkuser->mobile,
+                        'referral_code' => $checkuser->referral_code,
+                        'referral_amount' => $getdata->referral_amount,
+                        'login_type' => $checkuser->login_type,
+                        'profile_image' => 'unknown.png',
+                        'cart' => $cart,
+                    ] );
+
+                    return Redirect::to('/');
+
+                } else {
+                    return Redirect::back()->with('danger', trans("messages.invalid_otp"));
+                }  
+            } else {
+                return Redirect::back()->with('danger', trans("messages.invalid_email"));
+            }            
+       
+
                         if (env('Environment') == 'sendbox') {
                             session ( [
                                 'email' => $request->email,
-                                'otp' => $otp,
                             ] );
                         } else {
                             session ( [
                                 'email' => $request->email,
                             ] );
                         }
-                        return Redirect::to('/otp-verify')->with('success', trans('messages.email_sent'));  
+                        return Redirect::to('/')->with('success', trans('messages.email_sent'));  
                     }catch(\Swift_TransportException $e){
                         $response = $e->getMessage() ;
                         return Redirect::back()->with('danger', trans('messages.email_error'));

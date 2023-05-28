@@ -74,6 +74,9 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get("/search","ItemController@search");
 	Route::post('product/searchitem', 'ItemController@searchitem');
 
+	Route::get('/favorite', 'FavoriteController@index');
+	
+
 	Route::get('/cart', 'CartController@index');
 	Route::post('/cart/qtyupdate','CartController@qtyupdate');
 	Route::post('/cart/applypromocode', 'CartController@applypromocode');
@@ -89,6 +92,18 @@ Route::group(['namespace' => 'front'], function () {
 	Route::post('/user/delete', 'UserController@delete');
 	Route::get ('/logout', 'UserController@logout' );
 
+	Route::get('/orders', 'OrderController@index');
+	Route::post('/orders/cashondelivery', 'OrderController@cashondelivery');
+	Route::post('/orders/walletorder', 'OrderController@walletorder');
+	Route::post('/order/ordercancel', 'OrderController@ordercancel');
+	Route::get('/order-details/{id}', 'OrderController@orderdetails');
+
+	Route::get('/privacypolicy', 'PrivacyPolicyController@index');
+	Route::get('/privacy', 'PrivacyPolicyController@privacy');
+
+	Route::get('/termscondition', 'TermsController@index');
+	Route::get('/terms', 'TermsController@terms');
+	
 	Route::get('/aboutus', 'AboutController@index');
 	Route::get('/about', 'AboutController@about');
 });
@@ -103,6 +118,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::get('home', 'AdminController@home');
 		Route::post('changePassword', 'AdminController@changePassword');
 		Route::post('settings', 'AdminController@settings');
+		Route::get('getorder', 'AdminController@getorder');
+		Route::get('clearnotification', 'AdminController@clearnotification');
 
 		Route::get('branches', 'BranchController@index');
 		Route::post('branches/store', 'BranchController@store');
@@ -110,6 +127,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('branches/show', 'BranchController@show');
 		Route::post('branches/update', 'BranchController@update');
 		Route::post('branches/status', 'BranchController@status');
+
 
 		Route::get('slider', 'SliderController@index');
 		Route::post('slider/store', 'SliderController@store');
@@ -158,6 +176,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('item/delete', 'ItemController@delete');
 		Route::post('item/deletevariation', 'ItemController@deletevariation');
 
+		Route::get('payment', 'PaymentController@index');
+		Route::post('payment/status', 'PaymentController@status');
+		Route::get('manage-payment/{id}', 'PaymentController@managepayment');
+		Route::post('payment/update', 'PaymentController@update');
+
 		Route::get('addons', 'AddonsController@index');
 		Route::post('addons/getitem', 'AddonsController@getitem');
 		Route::post('addons/store', 'AddonsController@store');
@@ -167,8 +190,33 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('addons/status', 'AddonsController@status');
 		Route::post('addons/delete', 'AddonsController@delete');
 
+		Route::get('promocode', 'PromocodeController@index');
+		Route::post('promocode/store', 'PromocodeController@store');
+		Route::get('promocode/list', 'PromocodeController@list');
+		Route::post('promocode/show', 'PromocodeController@show');
+		Route::post('promocode/update', 'PromocodeController@update');
+		Route::post('promocode/status', 'PromocodeController@status');
+
+		Route::get('users', 'UserController@index');
+		Route::post('users/store', 'UserController@store');
+		Route::get('users/list', 'UserController@list');
+		Route::post('users/show', 'UserController@show');
+		Route::post('users/update', 'UserController@update');
+		Route::post('users/status', 'UserController@status');
+		Route::get('user-details/{id}', 'UserController@userdetails');
+		Route::post('users/addmoney', 'UserController@addmoney');
+		Route::post('users/deductmoney', 'UserController@deductmoney');
+
 		Route::get('settings', 'AboutController@index');
 		Route::post('about/update', 'AboutController@update');
+
+		Route::get('contact', 'ContactController@index');
+
+		Route::get('privacypolicy', 'PrivacyPolicyController@index');
+		Route::post('privacypolicy/update', 'PrivacyPolicyController@update');
+
+		Route::get('termscondition', 'TermsController@index');
+		Route::post('termscondition/update', 'TermsController@update');
 	});
 
 	Route::get('logout', 'AdminController@logout');

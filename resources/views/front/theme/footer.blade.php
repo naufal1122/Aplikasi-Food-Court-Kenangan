@@ -179,7 +179,7 @@ aria-hidden="true">
     <div class="modal-content">
         <div class="modal-body">
           <div class="col-lg-12">
-              <img src="{!! asset('storage/app/public/assets/images/logo6.png') !!}" alt="" class="img-responsive center-block d-block mx-auto" width="180" height="180">
+              <img src="{!! asset('storage/app/public/assets/images/logo6.png') !!}" alt="" class="img-responsive center-block d-block mx-auto" width="120" height="120">
             </div>
           <h3 class="hidden-xs mt-5" style="text-align: center;"><strong>{{ trans('labels.select_near_branch') }}</strong></h3>
           <h3 id="invalid_msg" style="color: red; text-align: center;"></h3>
@@ -216,6 +216,8 @@ aria-hidden="true">
 </footer>
 
 <a onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;"><i class="fad fa-long-arrow-alt-up"></i></a>
+<a onclick="topFunction()" id="myBtn1" title="Branchlist" data-toggle="modal" data-target="#branchlist" style="display: block;"><i class="fa fa-location-arrow"></i></a>
+
 
 <!-- footer -->
 

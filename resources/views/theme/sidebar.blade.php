@@ -26,6 +26,16 @@
                 </a>
             </li>
             <li>
+                <a href="{{URL::to('/admin/promocode')}}" aria-expanded="false">
+                    <i class="fa fa-tag"></i><span class="nav-text">{{ trans('labels.promocodes') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/users')}}" aria-expanded="false">
+                    <i class="fa fa-users"></i><span class="nav-text">{{ trans('labels.users') }}</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{URL::to('/admin/category')}}" aria-expanded="false">
                     <i class="icon-menu menu-icon"></i><span class="nav-text">{{ trans('labels.categories') }}</span>
                 </a>
@@ -74,6 +84,11 @@
             <li>
                 <a href="{{URL::to('/admin/banner')}}" aria-expanded="false">
                     <i class="fa fa-bullhorn"></i><span class="nav-text">{{ trans('labels.banners') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/promocode')}}" aria-expanded="false">
+                    <i class="fa fa-tag"></i><span class="nav-text">{{ trans('labels.promocodes') }}</span>
                 </a>
             </li>
             <li>

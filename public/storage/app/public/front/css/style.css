@@ -1340,7 +1340,7 @@ footer {
 .cart-pro-name {
   margin-bottom: 0;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .pro-add span {
@@ -1357,7 +1357,7 @@ footer {
 
 .cart-pricing {
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .cart-pro-edit i {
@@ -1369,7 +1369,7 @@ footer {
   width: 100%;
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid var(--primary-color-hover);
+  background-color: #ffffff
 }
 
 .pro-total,
@@ -1949,6 +1949,24 @@ footer .container {
   box-shadow: 0 0 22px rgba(0, 0, 0, 0.2);
 }
 
+#myBtn1 {
+  position: fixed;
+  bottom: 80px;
+  right: 24px;
+  width: 45px;
+  height: 45px;
+  z-index: 9999;
+  line-height: 50px;
+  font-size: 26px;
+  text-align: center;
+  border-radius: 10px;
+  color: #6C6BBF;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: #fff;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.2);
+}
+
 #success-msg {
   position: fixed;
   top: 0;
@@ -2497,4 +2515,8 @@ margin-right: auto;
   font-size: 15px;
   margin-bottom: 40px;
   text-align: center;
+}
+
+.btncomm {
+  
 }
