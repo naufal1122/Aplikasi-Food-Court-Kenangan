@@ -44,7 +44,7 @@
 
 <section class="product-prev-sec">
     <div class="container">
-        <h2 class="sec-head">{{ trans('labels.our_products') }}</h2>
+        <h2 class="sec-head">{{ trans('labels.our_products1') }}</h2>
         <div id="sync2" class="owl-carousel owl-theme">
             <?php $i=1; ?>
             @foreach ($getcategory as $category)
@@ -119,7 +119,7 @@
                 <img src='{!! asset("storage/app/public/images/about/".@$getabout->image) !!}' alt="">
             </div>
             <div class="about-contant">
-                <h2 class="sec-head text-left">Tentang Tenant Kami</h2>
+                <h2 class="sec-head text-left">TENTANG TENANT</h2>
                 <p>{!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->about_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</p>
             </div>
         </div>

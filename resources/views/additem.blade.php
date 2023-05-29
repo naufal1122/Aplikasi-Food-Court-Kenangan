@@ -34,6 +34,7 @@
                     @endforeach
 
                     <h4 class="card-title">{{ trans('labels.add_item') }}</h4>
+                    <div class="alert alert-danger" role="alert"><strong>Semua yang bertanda bintang (*) WAJIB DIISI.</strong></div>
                     <p class="text-muted"><code></code>
                     </p>
                     <div id="privacy-policy-three" class="privacy-policy">
@@ -62,7 +63,7 @@
                                 <div class="col-sm-3 col-md-12">
                                     <div class="form-group">
                                         <label for="cat_id" class="col-form-label">{{ trans('labels.category') }}</label>
-                                        <select name="cat_id" class="form-control selectpicker" multiple data-live-search="true" id="cat_id">
+                                        <select name="cat_id" class="form-control selectpicker" multiple data-live-search="true" id="cat_id" required="">
                                             <option value="">{{ trans('messages.select_category') }}</option>
                                             <?php
                                             foreach ($getcategory as $category) {
@@ -83,7 +84,7 @@
                                 <div class="col-sm-3 col-md-6">
                                     <div class="form-group">
                                         <label for="item_name" class="col-form-label">{{ trans('labels.item_name') }}</label>
-                                        <input type="text" class="form-control" name="item_name" id="item_name" placeholder="{{ trans('messages.enter_item_name') }}">
+                                        <input type="text" class="form-control" name="item_name" id="item_name" placeholder="{{ trans('messages.enter_item_name') }}" required="">
                                         @if ($errors->has('item_name'))
                                             <span class="text-danger">{{ $errors->first('item_name') }}</span>
                                         @endif
@@ -92,7 +93,7 @@
                                 <div class="col-sm-3 col-md-6">
                                     <div class="form-group">
                                         <label for="delivery_time" class="col-form-label">{{ trans('labels.delivery_time') }}</label>
-                                        <input type="text" class="form-control" name="delivery_time" id="delivery_time" placeholder="{{ trans('messages.enter_delivery_time') }}">
+                                        <input type="text" class="form-control" name="delivery_time" id="delivery_time" placeholder="{{ trans('messages.enter_delivery_time') }}" required="">
                                     </div>
                                 </div>
                             </div>
@@ -101,7 +102,7 @@
                                 <div class="col-sm-3 col-md-6">
                                     <div class="form-group">
                                         <label for="addons_id" class="col-form-label">{{ trans('labels.addons') }}</label>
-                                        <select name="addons_id[]" class="form-control selectpicker" multiple data-live-search="true" id="addons_id">
+                                        <select name="addons_id[]" class="form-control selectpicker" multiple data-live-search="true" id="addons_id" required="">
                                             <option value="">{{ trans('messages.select_addons') }}</option>
                                             <?php
                                             foreach ($getaddons as $addons) {
@@ -116,7 +117,7 @@
                                 <div class="col-sm-3 col-md-6">
                                     <div class="form-group">
                                         <label for="ingredients_id" class="col-form-label">{{ trans('labels.ingredients') }}</label>
-                                        <select name="ingredients_id[]" class="form-control selectpicker" multiple data-live-search="true" id="ingredients_id">
+                                        <select name="ingredients_id[]" class="form-control selectpicker" multiple data-live-search="true" id="ingredients_id" required="">
                                             <option value="">{{ trans('messages.select_ingredients') }}</option>
                                             <?php
                                             foreach ($getingredients as $ingredients) {

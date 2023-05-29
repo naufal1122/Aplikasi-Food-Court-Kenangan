@@ -101,13 +101,13 @@
                     <i class="fa fa-coffee"></i><span class="nav-text">{{ trans('labels.itemss') }}</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{URL::to('/admin/item')}}">{{ trans('labels.items') }}</a></li>
+                    <li><a href="{{URL::to('/admin/ingredients')}}">{{ trans('labels.ingredients') }}</a></li>
                 </ul>
                 <ul aria-expanded="false">
                     <li><a href="{{URL::to('/admin/addons')}}">{{ trans('labels.addons') }}</a></li>
                 </ul>
                 <ul aria-expanded="false">
-                    <li><a href="{{URL::to('/admin/ingredients')}}">{{ trans('labels.ingredients') }}</a></li>
+                    <li><a href="{{URL::to('/admin/item')}}">{{ trans('labels.items') }}</a></li>
                 </ul>
             </li>
             <li>

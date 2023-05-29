@@ -58,8 +58,7 @@
     <div class="container">
         <div class="signup-logo">
             <a href="{{URL::to('/')}}">
-                <img src="{!! asset('storage/app/public/assets/images/logo1.png') !!}" alt="">
-                <p><b>FoodCourt Kenangan</b></p>
+                <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" alt="" height="60px">
             </a>
         </div>
         <form action="{{ URL::to('/signup/signup') }}" method="post">
@@ -82,13 +81,14 @@
                 <input type="password" name="password_confirmation" placeholder="{{ trans('messages.enter_confirm_password') }}" class="w-100">
             @endif
             
-            <label class="accept-check w-100" for="accept">
+            <!-- <label class="accept-check w-100" for="accept">
                 <input type="checkbox" name="accept" id="accept" required="">
                 <p class="already-p">I accept the<a href="#"> terms & conditions </a></p>
-            </label>
+            </label> -->
 
-            <button class="btn">{{ trans('labels.signup') }}</button>
-            <p class="already">{{ trans('labels.already_account') }}<a href="{{URL::to('/signin')}}"> {{ trans('labels.login') }}</a></p>
+            
+            <button class="btndaftar">{{ trans('labels.signup') }}</button>
+            <p class="already1">{{ trans('labels.fast_with') }}<a href="{{URL::to('/auth/google')}}"> {{ trans('labels.google1') }}</a></p>
             @if ($errors->login->first('email') && $errors->login->first('mobile'))
         <div class="alert alert-danger" style="text-align: center;">
             {{ $errors->login->first('email') }} {{ $errors->login->first('mobile') }}

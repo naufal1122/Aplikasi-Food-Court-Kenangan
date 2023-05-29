@@ -121,7 +121,7 @@ return [
     "enter_building" => "Enter building",
     "enter_delivery_address" => "Enter delivery address",
     "enter_order_note" => "Write order notes...",
-    "enter_promocode" => "Enter Promocode",
+    "enter_promocode" => "Gunakan Kode Promo",
     "search_here" => "Search here",
     "enter_email" => "Masukkan email",
     "enter_password" => "Masukkan kata sandi",

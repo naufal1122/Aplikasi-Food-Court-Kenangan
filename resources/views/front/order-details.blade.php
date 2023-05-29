@@ -2,7 +2,7 @@
 
 <section class="order-details">
     <div class="container">
-        <h2 class="sec-head">{{ trans('labels.order_details') }}</h2>
+        <h2 class="sec-head">DETAIL <br> PESANAN</h2>
         <p>({{$summery['order_number']}} - {{$summery['created_at']}})</p>
         @if($summery['order_type'] == 1)
             @if($summery['status'] == 1)
@@ -81,6 +81,7 @@
                 </ul>
             @endif
         @endif
+        <br>
         <div class="row">
             <div class="col-lg-8">
                 @foreach ($orderdata as $orders)

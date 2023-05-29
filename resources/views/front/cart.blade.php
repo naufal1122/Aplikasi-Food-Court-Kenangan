@@ -2,7 +2,8 @@
 
 <section class="cart">
     <div class="container">
-        <h2 class="sec-head">{{ trans('labels.my_cart') }}</h2>
+        <h2 class="sec-head">PESANAN <br> SAYA</h2>
+        <br>
         <div class="row">
             @if (count($cartdata) == 0)
                 <p>No Data found</p>
@@ -56,7 +57,7 @@
                             @endif
 
                             @if ($cart->item_notes != "")
-                                <textarea placeholder="{{ trans('messages.enter_order_note') }}" readonly="">{{$cart->item_notes}}</textarea>
+                                <textarea placeholder="{{ trans('messages.enter_order_note') }}" readonly="" required="">{{$cart->item_notes}}</textarea>
                             @endif
                         </div>
                     </div>
@@ -79,7 +80,7 @@
                                 <button class="btn" id="ajaxSubmit">{{ trans('labels.apply') }}</button>
                             </div>
                             </form>
-                            <p data-toggle="modal" data-target="#staticBackdrop">{{ trans('labels.select_promocode') }}</p>
+                            <button data-toggle="modal" data-target="#staticBackdrop" class="btnsecondary">{{ trans('labels.select_promocode') }}</button>
                         </div>
                     @endif
                     
@@ -91,7 +92,7 @@
                     $total = array_sum(array_column(@$data, 'total_price'))+$tax;
                     ?>
                     <div class="cart-summary">
-                        <h2 class="sec-head">{{ trans('labels.payment_summary') }}</h2>
+                        <h2 class="sec-head">{{ trans('labels.payment_summary1') }}</h2>
 
                         <p class="pro-total">{{ trans('labels.order_total') }} <span>{{$taxval->currency}}{{number_format($order_total, 2)}}</span></p>
                         <p class="pro-total">{{ trans('labels.tax') }} <span>{{$taxval->currency}}{{number_format($tax, 2)}}</span></p>

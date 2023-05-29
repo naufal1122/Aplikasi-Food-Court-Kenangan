@@ -626,8 +626,8 @@
 
 	.review-carousel .owl-nav span,
 	#sync2 .owl-nav span {
-		font-size: 30px;
-		line-height: 18px;
+		font-size: 28px;
+		line-height: 20px;
 		width: 25px;
 		height: 25px;
 		margin-left: 15px;
@@ -727,8 +727,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		margin-top: 20px;
-		margin-bottom: 20px;
 	}
 
 	.signup-sec form {
@@ -737,11 +735,10 @@
 	}
 
 	.signup-logo img {
-		max-width: 60px;
-		max-height: 60px;
+		width: 250px;
+		height: 90px;
 		padding: 8px;
-		border-radius: 8px;
-		margin-right: 20px;
+		margin-top: 15px;
 	}
 
 	.view-order-btn {

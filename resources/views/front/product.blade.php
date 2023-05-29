@@ -16,7 +16,7 @@
             </div>
             <div class="cat-product">
                 <div class="cart-pro-head">
-                    <h2 class="sec-head">{{ trans('labels.our_products') }}</h2>
+                    <h2 class="sec-head">{{ trans('labels.our_products1') }}</h2>
                     <div class="btn-wrap" data-toggle="buttons">
                         <label id="list" class="btn">
                             <input type="radio" name="layout" id="layout1"> <i class="fas fa-list"></i>

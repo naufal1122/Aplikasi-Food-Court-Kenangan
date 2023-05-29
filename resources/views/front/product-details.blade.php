@@ -120,13 +120,13 @@
 
             
             <div class="col-12">
-                <h3 class="sec-head">{{ trans('labels.description') }}</h3>
+                <h3 class="sec-head">{{ trans('labels.description1') }}</h3>
                 <p>{{$getitem->item_description}}</p>
 
                 <hr class="hr" />
 
                 @if (count($getingredients['value']) != 0)
-                <h2 class="sec-head text-center">{{ trans('labels.ingredients') }}</h2>
+                <h2 class="sec-head text-center">{{ trans('labels.ingredients1') }}</h2>
                     <div class="ingredients-carousel owl-carousel owl-theme">
                         @foreach ($getingredients['value'] as $ingredients)
                         <div class="item">
@@ -142,7 +142,7 @@
             <hr class="hr" />
 
             <div class="col-12">
-                <h2 class="sec-head text-center">{{ trans('labels.related_food') }}</h2>
+                <h2 class="sec-head text-center">{{ trans('labels.related_food1') }}</h2>
                 <div class="pro-ref-carousel owl-carousel owl-theme">
                     @foreach($relatedproduct as $item)
                     <div class="item">
