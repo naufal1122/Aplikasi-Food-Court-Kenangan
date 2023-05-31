@@ -126,6 +126,18 @@
     </div>
 </section>
 
+<!-- <section class="tenant-pills">
+    <div class="row">
+        <div class="col-md-12">
+            @foreach ($branch as $branchlist)
+            <label class="PillList-item">
+                <input type="checkbox" name="feature" value="{{$branchlist->id}}" id="feature-{{$branchlist->id}}">
+                <span class="PillList-label">{{ $branchlist->name }}</span>
+            </label>
+            @endforeach
+        </div>
+    </div>
+</section> -->
 
 <!--<section class="our-app">
     <div class="container">
@@ -169,5 +181,28 @@
     </div>
 </section>
 -->
+
+<!-- <div class="card">
+  <div class="card-header">
+    <h3>{{ trans('labels.select_near_branch') }}</h3>
+  </div>
+  <div class="card-body">
+    <img src="{!! asset('storage/app/public/assets/images/logo6.png') !!}" alt="" class="img-responsive center-block d-block mx-auto" width="120" height="120">
+    <h3 id="invalid_msg" style="color: red; text-align: center;"></h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 mobile-margin-bottom">
+        <select name="branch" class="form-control" id="branch" required>
+          <option value="none">{{ trans('labels.select_branch') }}</option>
+          @foreach ($branch as $branchlist)
+            <option value="{{$branchlist->id}}" branch_name="{{$branchlist->name}}" {{(@$_COOKIE['branch'] == $branchlist->id) ? 'selected' :  '' }}>{{$branchlist->name}}</option>
+          @endforeach
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-primary col-xs-12 col-lg-12" onclick="BranchSelect()">{{ trans('labels.submit') }}</button>
+  </div>
+</div> -->
 
 @include('front.theme.footer')

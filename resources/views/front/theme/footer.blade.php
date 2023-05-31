@@ -746,6 +746,14 @@ aria-hidden="true">
         }
         return null;
     }
+
+    $(document).ready(function() {
+            // When a checkbox is checked, uncheck all other checkboxes
+            $('input[type=checkbox]').on('change', function() {
+                $('input[type=checkbox]').not(this).prop('checked', false);
+            });
+        });
+        
 </script>
 @yield('script')
 </body>
