@@ -133,7 +133,25 @@ section {
   margin-top: 30px;
   font-size: 15px;
   font-weight: 900;
-  color: #343333;;
+  color: #343333;
+}
+
+.sec-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #343333;
+}
+
+.sec-title1 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary-color-hover);
+  border: var(--primary-color-hover) 1px solid;
+  border-radius: 510px;
+  padding: 8px;
+  margin-top: 5px;
 }
 
 .btn {
@@ -1499,6 +1517,13 @@ body .promo-modal.modal {
   align-items: center;
 }
 
+.modal-content {
+  padding: 0;
+  border-radius: 20px;
+}
+
+
+
 .modal-head h4 {
   margin-bottom: 0;
 }
@@ -2565,6 +2590,37 @@ margin-right: auto;
   letter-spacing: 3px;
 }
 
+.btnmodal {
+  color: #fff;
+  margin-bottom: 5px;
+  display: block;
+  padding: 8px 25px;
+  border-radius: 10px;
+  background-color: var(--primary-color-hover);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.head-modal{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #333366;
+}
+
+.formcontrol {
+  border-radius: 10px;
+  border: 1px solid #6C6BBF;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6C6BBF;
+}
+
 .btndaftar:hover {
   color: #fff;
 }
@@ -2630,3 +2686,4 @@ margin-right: auto;
   margin-left: 15px;
   margin-right: 15px;
 }
+

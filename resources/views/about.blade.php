@@ -27,6 +27,10 @@
                             @csrf
                             @if (Auth::user()->type == "4")
                             <div class="form-group">
+                                <label for="title_content" class="col-form-label">{{ trans('labels.about_title') }}</label>
+                                <textarea class="form-control" id="title_content" name="title_content" placeholder="{{Auth::user()->name}}">{{$getabout->title_content}}</textarea>
+                            </div>
+                            <div class="form-group">
                                 <label for="about_content" class="col-form-label">{{ trans('labels.about_content') }}</label>
                                 <textarea class="form-control" id="about_content" rows="5" name="about_content">{{$getabout->about_content}}</textarea>
                             </div>

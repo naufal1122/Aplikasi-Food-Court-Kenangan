@@ -15549,3 +15549,10 @@ nav a:hover {
   object-fit: cover;
   border-radius: 5%;
 }
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}

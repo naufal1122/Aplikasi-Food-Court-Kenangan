@@ -2,6 +2,12 @@
 
 @section('content')
 
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Pastikan anda telah mengedit informasi tenant dengan <a href="{{URL::to('/admin/settings')}}" class="alert-link">&nbsp;&nbsp;<strong>KLIK DISINI</strong>&nbsp;&nbsp;&nbsp;</a>jika sudah, silahkan tutup pesan ini.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
 
     <div class="container-fluid mt-3">
         <div class="row"> 
@@ -202,11 +208,11 @@
                         if (response == 1) {
                             location.reload();
                         } else {
-                            swal("Cancelled", "{{ trans('messages.wrong') }} :(", "error");
+                            location.reload();
                         }
                     },
                     error: function(e) {
-                        swal("Cancelled", "{{ trans('messages.wrong') }} :(", "error");
+                        location.reload();
                     }
                 });
             } else {

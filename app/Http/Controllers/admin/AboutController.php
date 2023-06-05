@@ -123,7 +123,7 @@ class AboutController extends Controller
                     $UpdateWalletDetails = About::where('branch_id',Auth::user()->id)->update(['image' => $image]);
                 } 
                 
-                $UpdateWalletDetails = About::where('branch_id',Auth::user()->id)->update(['about_content' => trim($request->about_content),'fb' => $request->fb,'twitter' => $request->twitter,'insta' => $request->insta,'mobile' => $request->mobile,'email' => $request->email,'address' => $request->address]);
+                $UpdateWalletDetails = About::where('branch_id',Auth::user()->id)->update(['title_content' => trim($request->title_content), 'about_content' => trim($request->about_content),'fb' => $request->fb,'twitter' => $request->twitter,'insta' => $request->insta,'mobile' => $request->mobile,'email' => $request->email,'address' => $request->address]);
             }
             
 

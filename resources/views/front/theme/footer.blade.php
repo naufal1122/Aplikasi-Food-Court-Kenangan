@@ -181,7 +181,7 @@ aria-hidden="true">
           <div class="col-lg-12">
               <img src="{!! asset('storage/app/public/assets/images/logo6.png') !!}" alt="" class="img-responsive center-block d-block mx-auto" width="120" height="120">
             </div>
-          <h3 class="hidden-xs mt-5" style="text-align: center;"><strong>{{ trans('labels.select_near_branch') }}</strong></h3>
+          <h3 class="head-modal" style="text-align: center;"><strong>{{ trans('labels.select_near_branch') }}</strong></h3>
           <h3 id="invalid_msg" style="color: red; text-align: center;"></h3>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 mobile-margin-bottom">
@@ -195,7 +195,7 @@ aria-hidden="true">
             </div>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary col-xs-12 col-lg-12" onclick="BranchSelect()">{{ trans('labels.submit') }}</button>
+            <button type="button" class="btnmodal col-xs-12 col-lg-12" onclick="BranchSelect()">PILIH</button>
         </div>
     </div>
 

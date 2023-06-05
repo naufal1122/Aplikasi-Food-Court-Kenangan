@@ -106,6 +106,19 @@ Route::group(['namespace' => 'front'], function () {
 	
 	Route::get('/aboutus', 'AboutController@index');
 	Route::get('/about', 'AboutController@about');
+
+	// Get Route For Show Payment Form
+	Route::get('/paywithrazorpay', 'RazorpayController@payWithRazorpay')->name('paywithrazorpay');
+	// Post Route For Makw Payment Request
+	Route::post('/payment', 'RazorpayController@payment')->name('payment');
+
+	Route::post('/addmoney', 'RazorpayController@addmoney')->name('addmoney');
+
+	Route::post('/addmoneystripe', 'CheckoutController@addmoneystripe');
+	
+	Route::post('stripe-payment/charge', 'CheckoutController@charge');
+
+	Route::get('/wallet', 'UserController@wallet');
 });
 
 Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
@@ -127,7 +140,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('branches/show', 'BranchController@show');
 		Route::post('branches/update', 'BranchController@update');
 		Route::post('branches/status', 'BranchController@status');
-
 
 		Route::get('slider', 'SliderController@index');
 		Route::post('slider/store', 'SliderController@store');
@@ -206,6 +218,42 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::get('user-details/{id}', 'UserController@userdetails');
 		Route::post('users/addmoney', 'UserController@addmoney');
 		Route::post('users/deductmoney', 'UserController@deductmoney');
+
+		Route::get('orders', 'OrderController@index');
+		Route::get('orders/list', 'OrderController@list');
+		Route::get('invoice/{id}', 'OrderController@invoice');
+		Route::post('orders/destroy', 'OrderController@destroy');
+		Route::post('orders/update', 'OrderController@update');
+		Route::post('orders/assign', 'OrderController@assign');
+
+		Route::get('reviews', 'RattingController@index');
+		Route::get('reviews/list', 'RattingController@list');
+		Route::post('reviews/destroy', 'RattingController@destroy');
+
+		Route::get('pincode', 'PincodeController@index');
+		Route::post('pincode/store', 'PincodeController@store');
+		Route::get('pincode/list', 'PincodeController@list');
+		Route::post('pincode/show', 'PincodeController@show');
+		Route::post('pincode/update', 'PincodeController@update');
+		Route::post('pincode/destroy', 'PincodeController@destroy');
+
+		Route::get('report', 'ReportController@index');
+		Route::get('report/list', 'ReportController@list');
+		Route::post('report/show', 'ReportController@show');
+		Route::post('report/destroy', 'ReportController@destroy');
+		Route::post('report/update', 'ReportController@update');
+		Route::post('report/assign', 'ReportController@assign');
+
+		Route::get('time', 'TimeController@index');
+		Route::post('time/store', 'TimeController@store');
+		Route::get('time/list', 'TimeController@list');
+		Route::post('time/show', 'TimeController@show');
+		Route::post('time/update', 'TimeController@update');
+		Route::post('time/destroy', 'TimeController@destroy');
+
+		Route::get('notification', 'NotificationController@index');
+		Route::post('notification/store', 'NotificationController@store');
+		Route::get('notification/list', 'NotificationController@list');
 
 		Route::get('settings', 'AboutController@index');
 		Route::post('about/update', 'AboutController@update');

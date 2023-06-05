@@ -31,6 +31,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{URL::to('/admin/payment')}}" aria-expanded="false">
+                    <i class="fa fa-usd"></i><span class="nav-text">{{ trans('labels.payment_methods') }}</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{URL::to('/admin/users')}}" aria-expanded="false">
                     <i class="fa fa-users"></i><span class="nav-text">{{ trans('labels.users') }}</span>
                 </a>
@@ -53,6 +58,21 @@
                 <ul aria-expanded="false">
                     <li><a href="{{URL::to('/admin/ingredients')}}">{{ trans('labels.ingredients') }}</a></li>
                 </ul>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/orders')}}" aria-expanded="false">
+                    <i class="fa fa-shopping-cart"></i><span class="nav-text">{{ trans('labels.orders') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/reviews')}}" aria-expanded="false">
+                    <i class="fa fa-star"></i><span class="nav-text">{{ trans('labels.reviews') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/report')}}" aria-expanded="false">
+                    <i class="fa fa-bar-chart"></i><span class="nav-text">{{ trans('labels.report') }}</span>
+                </a>
             </li>
             <li>
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
@@ -87,6 +107,11 @@
                 </a>
             </li>
             <li>
+                <a href="{{URL::to('/admin/orders')}}" aria-expanded="false">
+                    <i class="fa fa-shopping-cart"></i><span class="nav-text">{{ trans('labels.orders') }}</span>
+                </a>
+            </li>
+            <li>
                 <a href="{{URL::to('/admin/promocode')}}" aria-expanded="false">
                     <i class="fa fa-tag"></i><span class="nav-text">{{ trans('labels.promocodes') }}</span>
                 </a>
@@ -111,11 +136,24 @@
                 </ul>
             </li>
             <li>
+                <a href="{{URL::to('/admin/report')}}" aria-expanded="false">
+                    <i class="fa fa-bar-chart"></i><span class="nav-text">{{ trans('labels.report') }}</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{URL::to('/admin/reviews')}}" aria-expanded="false">
+                    <i class="fa fa-star"></i><span class="nav-text">{{ trans('labels.reviews') }}</span>
+                </a>
+            </li>
+            <li>
                 <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                     <i class="fa fa-cog"></i><span class="nav-text">{{ trans('labels.cms_pages') }}</span>
                 </a>
                 <ul aria-expanded="false">
-                    <li><a href="{{URL::to('/admin/settings')}}">{{ trans('labels.about_settings') }}</a></li>
+                    <li><a href="{{URL::to('/admin/settings')}}"><i class="fa fa-info-circle"></i><span class="nav-text">{{ trans('labels.about_settings') }}</span></a></li>
+                </ul>
+                <ul aria-expanded="false">
+                    <li><a href="{{URL::to('/admin/clear-cache')}}"><i class="fa fa-refresh"></i><span class="nav-text">{{ trans('labels.clear_cache') }}</span></a></li>
                 </ul>
             </li>
         </ul>

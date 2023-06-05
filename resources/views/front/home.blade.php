@@ -120,11 +120,13 @@
             </div>
             <div class="about-contant">
                 <h2 class="sec-head text-left">TENTANG TENANT</h2>
-                <p>{!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->about_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</p>
+                <h3 class="sec-title"> {!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->title_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</h3>
+                <p class="sec-title">{!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->about_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</p>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- <section class="tenant-pills">
     <div class="row">

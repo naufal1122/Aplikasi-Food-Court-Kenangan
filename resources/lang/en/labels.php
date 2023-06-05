@@ -136,6 +136,7 @@ return [
     "about_kenangan" => "Food Court Kenangan",
     "list_tenant" => "Semua Tenant",
     "branch_name" => "Branch Name",
+    "about_title" => "Nama Tenant",
 
     //Admin header
     "admin_title" => "Admin",
@@ -171,6 +172,7 @@ return [
     "users" => "Customer",
     "reviews" => "Reviews",
     "report" => "Laporan",
+    "report1" => "Laporan Transaksi",
     "notification" => "Notifikasi",
     "inquiries" => "Inquiries",
     "cms_pages" => "Pengaturan",
@@ -328,7 +330,7 @@ return [
     "RazorPay_Production_Secret_key" => "RazorPay Production Secret Key",
 
     //Orders
-    "all_orders" => "All orders",
+    "all_orders" => "Semua Pesanan",
 
     //Users
     "all_users" => "All users",
@@ -342,7 +344,7 @@ return [
     "current_balance" => "Current balance",
 
     //Reviews
-    "all_reviews" => "All reviews",
+    "all_reviews" => "Semua Ulasan",
     "rating" => "Rating",
 
     //Report
@@ -394,5 +396,5 @@ return [
     "add_ingredients" => "Tambah Bahan",
     "edit_ingredients" => "Edit Bahan Makanan",
     "all_ingredients" => "List Semua Bahan",
-    "select_near_branch" => "Pilih Tenant",
+    "select_near_branch" => "PILIH TENANT",
 ];
