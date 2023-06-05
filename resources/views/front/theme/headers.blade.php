@@ -60,7 +60,6 @@
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
 				<a class="logo-compact" href="{{URL::to('/')}}"> <img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" width="140" height="40" alt=""></a>
-						<h3 class="sec-title1" onclick="topFunction()" data-toggle="modal" data-target="#branchlist"> {!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->title_content, ENT_QUOTES, 'UTF-8'), $limit = 14, $end = '...') !!}</h3>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<div class="menu-icon">
 						<div class="bar1"></div>
@@ -71,13 +70,10 @@
 				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
 						<li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-							<a class="nav-link" href="{{URL::to('/landing')}}">{{ trans('labels.home') }}</a>
+							<a class="nav-link" href="{{URL::to('/')}}">{{ trans('labels.home') }}</a>
 						</li>
 						<li class="nav-item {{ request()->is('branch') ? 'active' : '' }}">
 							<a class="nav-link" href="#" data-toggle="modal" data-target="#branchlist">{{ trans('labels.list_tenant') }}</a>
-						</li>
-						<li class="nav-item {{ request()->is('product') ? 'active' : '' }}">
-							<a class="nav-link" href="{{URL::to('/product')}}">{{ trans('labels.our_products') }}</a>
 						</li>
 
 						@if (Session::get('id'))
@@ -153,5 +149,3 @@
 	<div id="error-msg" class="alert alert-dismissible mt-3" style="display: none;">
 	    <span id="ermsg"></span>
 	</div>
-
-	@include('cookieConsent::index')

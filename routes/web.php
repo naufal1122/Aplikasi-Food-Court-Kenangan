@@ -20,10 +20,12 @@ Route::get('/', function () {
      return view('front.home');
 });
 
+Route::get('/landing', 'front\LandingController@index');
+
 //Landing Page//
-Route::get('/landing', function () {
-	return view('landingpage');
-});
+//Route::get('/landing', function () {
+//	return view('landingpage');
+//});
 
 Route::get('/clear-cache', function() {
     Artisan::call('cache:clear');
