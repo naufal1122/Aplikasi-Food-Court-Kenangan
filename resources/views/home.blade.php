@@ -52,20 +52,34 @@
                     </a>
                 </div>
             </div>
-            
-            <div class="col-lg-3 col-sm-6">
-                <div class="card gradient-4">
-                    <a href="{{URL::to('/admin/users')}}">
-                        <div class="card-body">
-                            <h3 class="card-title text-white">{{ trans('labels.users') }}</h3>
-                            <div class="d-inline-block">
-                                <h2 class="text-white">{{count($getusers)}}</h2>
+            @if (Auth::user()->type == "4") 
+                <div class="col-lg-3 col-sm-6">
+                    <div class="card gradient-3">
+                        <a href="{{URL::to('/admin/addons')}}">
+                            <div class="card-body">
+                                <h3 class="card-title text-white">{{ trans('labels.addons') }}</h3>
+                                <div class="d-inline-block">
+                                    <h2 class="text-white">{{count($addons)}}</h2>
+                                </div>
+                                <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-plus"></i></span>
                             </div>
-                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-users"></i></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                <div class="card gradient-3">
+                    <a href="{{URL::to('/admin/reviews')}}">
+                        <div class="card-body">
+                            <h3 class="card-title text-white">{{ trans('labels.reviews') }}</h3>
+                            <div class="d-inline-block">
+                                <h2 class="text-white">{{count($getreview)}}</h2>
+                            </div>
+                            <span class="float-right display-5 opacity-5"  style="color:#fff;"><i class="fa fa-star"></i></span>
                         </div>
                     </a>
                 </div>
             </div>
+            @endif
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-4">
                     <a href="{{URL::to('/admin/orders')}}">
@@ -79,7 +93,6 @@
                     </a>
                 </div>
             </div>
-            
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-2">
                     <a href="{{URL::to('/admin/promocode')}}">
@@ -93,8 +106,6 @@
                     </a>
                 </div>
             </div>
-           
-       
             <div class="col-lg-3 col-sm-6">
                 <div class="card gradient-3">
                     <a href="{{URL::to('/admin/orders')}}">
@@ -152,15 +163,6 @@
                     <div class="form-group">
                         <label for="category_id" class="col-form-label">{{ trans('labels.order_id') }}:</label>
                         <input type="text" class="form-control" id="bookId" name="bookId" readonly="">
-                    </div>
-                    <div class="form-group">
-                        <label for="category_id" class="col-form-label">{{ trans('messages.select_driver') }}:</label>
-                        <select class="form-control" name="driver_id" id="driver_id" required="">
-                            <option value="">{{ trans('messages.select_driver') }}</option>
-                            @foreach ($getdriver as $driver)
-                                <option value="{{$driver->id}}">{{$driver->name}}</option>
-                            @endforeach
-                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">

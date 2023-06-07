@@ -440,7 +440,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8);
 }
 
 .feature-contant {
@@ -2772,6 +2771,30 @@ margin-right: auto;
 
 .card {
   margin-bottom: 30px;
+  border-radius: 30px;
+  border: 1px solid var(--border-color);
+  background-color: #ebeaff
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333366;
+}
+
+.card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 50%;
+}
+
+.card-text {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333366;
 }
 
 .rating {
@@ -2782,3 +2805,185 @@ margin-right: auto;
   color: #333366;
 }
 
+.btnsectenant {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border: 2px solid #6C6BBF;
+  font-weight: 600;
+  font-size: 13px;
+  color: #6C6BBF;
+  background: transparent;
+}
+
+.containertenant {
+  margin-top: -45px;
+  margin-bottom: -60px;
+  padding: 5px 15px;
+}
+
+.parallax {
+  margin-top: -45px;
+}
+
+/* Section - Title */
+/**************************/
+#parallax-world-of-ugg .title {
+  background: linear-gradient(to right, #dcdaff, #f2f1ff);
+  padding: 60px; 
+  margin:0 auto; 
+  text-align:center;
+}
+
+#parallax-world-of-ugg .title h1 {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333366;
+}
+
+#parallax-world-of-ugg h3 {
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #333366;
+}
+
+/* Section - Block */
+/**************************/
+#parallax-world-of-ugg .block {
+  background: white; 
+  padding: 60px; 
+  width:820px; 
+  margin:0 auto; 
+  text-align:justify;
+}
+
+#parallax-world-of-ugg .block-gray {
+  background: #f2f2f2;
+  padding: 60px;
+}
+#parallax-world-of-ugg .section-overlay-mask {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: black; 
+  opacity: 0.70;
+}
+
+/* Section - Parallax */
+/**************************/
+#parallax-world-of-ugg .parallax-one {
+  padding-top: 200px; 
+  padding-bottom: 200px; 
+  overflow: hidden; 
+  position: relative; 
+  width: 100%; 
+  background-image: url('https://source.unsplash.com/dc_JMu8lb5U');
+  background-attachment: fixed; 
+  background-size: cover; 
+  -moz-background-size: cover; 
+  -webkit-background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: top center;
+}
+
+/* Extras */
+/**************************/
+#parallax-world-of-ugg .line-break {
+  border-bottom:1px solid black; 
+  width: 150px; 
+  margin:0 auto;
+}
+
+/* Media Queries */
+/**************************/
+@media screen and (max-width: 959px) and (min-width: 768px) 
+{
+  #parallax-world-of-ugg .block {
+    padding: 40px; 
+    width:620px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #parallax-world-of-ugg .block {
+    padding: 30px; 
+    width:420px;
+  }
+
+  #parallax-world-of-ugg h2 {
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    color: #ebeaff;
+  }
+
+  #parallax-world-of-ugg .block {
+    padding: 30px;
+  }
+
+  #parallax-world-of-ugg .parallax-one, 
+  #parallax-world-of-ugg .parallax-two, 
+  #parallax-world-of-ugg .parallax-three {
+    padding-top:100px; 
+    padding-bottom:100px;
+  }
+
+}
+@media screen and (max-width: 479px) {
+  #parallax-world-of-ugg .block {
+    padding: 30px 15px; 
+    width:290px;
+  }
+}
+
+.parallax-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.cards {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: #f6f6ff;
+  border-radius: 10px;
+}
+
+.featured-cards {
+  background-color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: -20px;
+}
+
+.sec-cards {
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  margin-top: -35px;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  color: #333366;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #333366;
+}

@@ -111,6 +111,7 @@ return [
     "or" => "Atau lebih cepat...",
     "fast_with" => "Daftar lebih cepat dengan",
     "google1" => "Google",
+    "pos" => "Mode POS",
     "dont_account" => "Belum Punya Akun?",
     "qty" => "Qty",
     "notes" => "Notes",
