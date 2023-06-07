@@ -59,7 +59,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
-				<a class="logo-compact" href="{{URL::to('/')}}"> <img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" width="140" height="40" alt=""></a>
+				<a class="logo-compact" href="{{URL::to('#')}}"> <img src="{!! asset('storage/app/public/assets/images/logo5.png') !!}" width="140" height="40" alt=""></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<div class="menu-icon">
 						<div class="bar1"></div>
@@ -73,7 +73,7 @@
 							<a class="nav-link" href="{{URL::to('/')}}">{{ trans('labels.home') }}</a>
 						</li>
 						<li class="nav-item {{ request()->is('branch') ? 'active' : '' }}">
-							<a class="nav-link" href="#" data-toggle="modal" data-target="#branchlist">{{ trans('labels.list_tenant') }}</a>
+							<a class="nav-link" href="{{URL::to('/tenant')}}">{{ trans('labels.list_tenant') }}</a>
 						</li>
 
 						@if (Session::get('id'))
@@ -114,21 +114,24 @@
 						
 
 						@if (Session::get('id'))
+							<div class="box-user">
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:void(0)">
 									<img src='{!! asset("storage/app/public/images/profile/".Session::get("profile_image")) !!}' alt="">
 								</a>
+								<h3 class="user-dropdown">Halo, {{Session::get('name')}}</h3>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 									<a class="dropdown-item" href="" data-toggle="modal" data-target="#EditProfile">{{ trans('labels.hello') }}, {{Session::get('name')}}</a>
 									<a class="dropdown-item" href="{{URL::to('/address')}}">{{ trans('labels.my_address') }}</a>
-									<a class="dropdown-item" href="" data-toggle="modal" data-target="#AddReview">{{ trans('labels.add_review') }}</a>
-									<a class="dropdown-item" href="" data-toggle="modal" data-target="#Refer">{{ trans('labels.refer_earn') }}</a>
+									<!-- <a class="dropdown-item" href="" data-toggle="modal" data-target="#AddReview">{{ trans('labels.add_review') }}</a> -->
+									<!-- <a class="dropdown-item" href="" data-toggle="modal" data-target="#Refer">{{ trans('labels.refer_earn') }}</a> -->
 									@if (Session::get('login_type') == "email")
 									<a class="dropdown-item" href="" data-toggle="modal" data-target="#ChangePasswordModal">{{ trans('labels.change_password') }}</a>
 									@endif
 									<a class="dropdown-item" href="{{URL::to('/logout')}}">{{ trans('labels.logout') }}</a>
 								</div>
 							</li>
+							</div>
 						@else 
 							<li class="nav-item">
 								<a class="nav-link btn sign-btn" href="{{URL::to('/signin')}}">{{ trans('labels.login') }}</a>

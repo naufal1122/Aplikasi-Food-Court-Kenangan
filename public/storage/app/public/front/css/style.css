@@ -164,6 +164,16 @@ section {
   box-shadow: 0 0 4px var(--primary-color-hover);
 }
 
+.btnclose {
+  color: var(--primary-color-hover);
+  margin: 0 auto;
+  display: block;
+  padding: 10px 25px;
+  border-radius: 6px;
+  background-color: var(--primary-bg-color);
+  box-shadow: 0 0 4px var(--primary-color-hover);
+}
+
 .btn:hover {
   color: #fff;
 }
@@ -344,6 +354,12 @@ img {
 
 .banner-sec .item img {
   filter: brightness(0.4);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-sec-landing .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -632,6 +648,17 @@ img {
 
 /* Review css */
 
+.review-sec {
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 18px;
+  margin-left: 18px;
+  border-radius: 10px;
+  border: 1px solid #ebeaff;
+  background-color: #ebeaff;
+}
+
 .review-profile {
   width: 60px;
   height: 60px;
@@ -650,15 +677,15 @@ img {
 }
 
 .review-carousel h3 {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin: 15px 0 10px;
 }
 
 .review-carousel p {
-  color: #000;
-  font-weight: 400;
-  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 15px 0 10px;
 }
 
 .review-carousel .owl-nav,
@@ -2014,6 +2041,27 @@ footer .container {
   font-weight: 700;
 }
 
+#myBtn2 {
+  position: fixed;
+  bottom: 95px;
+  right: 24px;
+  width: 140px;
+  height: 40px;
+  z-index: 9999;
+  line-height: 40px;
+  font-size: 26px;
+  text-align: center;
+  border-radius: 10px;
+  color: #6C6BBF;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: #fff;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.2);
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  font-weight: 700;
+}
+
 #success-msg {
   position: fixed;
   top: 0;
@@ -2685,5 +2733,52 @@ margin-right: auto;
 .tenant-pills {
   margin-left: 15px;
   margin-right: 15px;
+}
+
+.user-dropdown {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333366;
+}
+
+.box-user {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 1px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background-color: #ebeaff
+}
+
+.jumbotron-fluid {
+  margin-top: 35px;
+  background-color: #333366;
+}
+
+.display-4 {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: var(--primary-font);
+  color: #ebeaff; 
+  text-align: center;
+  letter-spacing: 5px;
+  line-height: 2;
+}
+
+.card {
+  margin-bottom: 30px;
+}
+
+.rating {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333366;
 }
 

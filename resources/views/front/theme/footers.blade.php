@@ -216,7 +216,7 @@ aria-hidden="true">
 
 <a onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;"><i class="fad fa-long-arrow-alt-up"></i></a>
 <!-- <a onclick="topFunction()" id="myBtn1" title="Branchlist" data-toggle="modal" data-target="#branchlist" style="display: block;"><i class="fa fa-building"></i></a> -->
-<p onclick="topFunction()" id="myBtn1" title="Branchlist" data-toggle="modal" data-target="#branchlist" style="display: block;"><i class="fa fa-location-arrow"></i>&nbsp;&nbsp;LIST TENANT</p>
+<a href="{{URL::to('/tenant')}}" id="myBtn2" title="Branchlist" style="display: block;"><i class="fa fa-location-arrow"></i>&nbsp;&nbsp;LIST TENANT</a>
 
 <!-- footer -->
 

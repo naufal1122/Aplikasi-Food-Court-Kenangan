@@ -78,7 +78,7 @@ aria-hidden="true">
 
         </div>
         <div class="modal-footer">
-          <input type="reset" class="btn open comman w-50" data-dismiss="modal" value="{{ trans('labels.close') }}">
+          <input type="reset" class="btnclose w-50" data-dismiss="modal" value="{{ trans('labels.close') }}">
           <button type="submit" class="btn open comman w-50">{{ trans('labels.update') }}</button>
         </div>
       </form>
@@ -118,9 +118,8 @@ aria-hidden="true">
 
         </div>
         <div class="modal-footer">
-          <input type="reset" class="btn open comman" data-dismiss="modal"
-          value="{{ trans('labels.close') }}">
-          <input type="button" class="btn open comman" onclick="addReview()"  value="{{ trans('labels.submit') }}">
+          <input type="reset" class="btnclose" data-dismiss="modal" value="{{ trans('labels.close') }}">
+          <input type="button" class="btn open comman" onclick="addReview()" value="{{ trans('labels.submit') }}">
         </div>
       </form>
     </div>

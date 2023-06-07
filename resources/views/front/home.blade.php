@@ -23,18 +23,18 @@
             <div class="item">
                 <div class="feature-box">
                     @if ($banner->type != "")
-                        @if ($banner->type == "category")
-                            <a href="{{URL::to('product/'.$banner->cat_id)}}">
+                    @if ($banner->type == "category")
+                    <a href="{{URL::to('product/'.$banner->cat_id)}}">
                         @else
-                            <a href="{{URL::to('product-details/'.$banner->item_id)}}">
-                        @endif
+                        <a href="{{URL::to('product-details/'.$banner->item_id)}}">
+                            @endif
                             <img src='{!! asset("storage/app/public/images/banner/".$banner->image) !!}' alt="">
                         </a>
-                    @else
+                        @else
                         <img src='{!! asset("storage/app/public/images/banner/".$banner->image) !!}' alt="">
-                    @endif
-                    <div class="feature-contant">
-                    </div>
+                        @endif
+                        <div class="feature-contant">
+                        </div>
                 </div>
             </div>
             @endforeach
@@ -46,7 +46,7 @@
     <div class="container">
         <h2 class="sec-head">{{ trans('labels.our_products1') }}</h2>
         <div id="sync2" class="owl-carousel owl-theme">
-            <?php $i=1; ?>
+            <?php $i = 1; ?>
             @foreach ($getcategory as $category)
             <div class="item product-tab">
                 <img src='{!! asset("storage/app/public/images/category/".$category->image) !!}' alt=""> {{$category->category_name}}
@@ -55,7 +55,7 @@
             @endforeach
         </div>
         <div id="sync1" class="owl-carousel owl-theme">
-            <?php $i=1; ?>
+            <?php $i = 1; ?>
             @foreach($getcategory as $category)
             <div class="item">
                 <div class="tab-pane">
@@ -63,22 +63,22 @@
                         <?php $count = 0; ?>
                         @foreach($getitem as $item)
                         @if($item->cat_id==$category->id)
-                        <?php if($count == 6) break; ?>
+                        <?php if ($count == 6) break; ?>
                         <div class="col-lg-4 col-md-6">
                             <div class="pro-box">
                                 <div class="pro-img">
-                                    
+
                                     <a href="{{URL::to('product-details/'.$item->id)}}">
                                         <img src='{{$item["itemimage"]->image }}' alt="">
                                     </a>
                                     @if (Session::get('id'))
-                                        @if ($item->is_favorite == 1)
-                                            <i class="fas fa-heart i"></i>
-                                        @else
-                                            <i class="fal fa-heart i" onclick="MakeFavorite('{{$item->id}}','{{Session::get('id')}}')"></i>
-                                        @endif
+                                    @if ($item->is_favorite == 1)
+                                    <i class="fas fa-heart i"></i>
                                     @else
-                                        <a class="i" href="{{URL::to('/signin')}}"><i class="fal fa-heart"></i></a>
+                                    <i class="fal fa-heart i" onclick="MakeFavorite('{{$item->id}}','{{Session::get('id')}}')"></i>
+                                    @endif
+                                    @else
+                                    <a class="i" href="{{URL::to('/signin')}}"><i class="fal fa-heart"></i></a>
                                     @endif
                                 </div>
                                 <div class="product-details-wrap">
@@ -88,8 +88,8 @@
                                         </a>
                                         <p class="pro-pricing">
                                             @foreach ($item->variation as $key => $value)
-                                                {{$getdata->currency}}{{number_format($value->product_price, 2)}}
-                                                @break
+                                            {{$getdata->currency}}{{number_format($value->product_price, 2)}}
+                                            @break
                                             @endforeach
                                         </p>
                                     </div>
@@ -127,8 +127,33 @@
     </div>
 </section>
 
+<section class="review-sec">
+    <div class="container">
+        <!-- <h2 class="sec-head">{{ trans('labels.our_review') }}</h2> -->
+        <div class="review-carousel owl-carousel owl-theme">
+            @foreach($getreview as $review)
+            <div class="item">
+                <div class="review-profile">
+                    <img src='{!! asset("storage/app/public/images/profile/".$review["users"]->profile_image) !!}' alt="">
+                </div>
+                <h3>{{$review['users']->name}}</h3>
+                <div class="rating">
+                    @for ($i = 5; $i >= 1; $i--)
+                    @if ($i <= $review->ratting)
+                        <i class="fas fa-star"></i>
+                        @else
+                        <i class="far fa-star"></i>
+                        @endif
+                        @endfor
+                </div>
+                <p>{{ Str::limit($review->comment, 50) }}</p>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 
-<!-- <section class="tenant-pills">
+<section class="tenant-pills">
     <div class="row">
         <div class="col-md-12">
             @foreach ($branch as $branchlist)
@@ -139,7 +164,9 @@
             @endforeach
         </div>
     </div>
-</section> -->
+</section>
+
+
 
 <!--<section class="our-app">
     <div class="container">
@@ -163,26 +190,8 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
-
-<!--<section class="review-sec">
-    <div class="container">
-        <h2 class="sec-head">{{ trans('labels.our_review') }}</h2>
-        <div class="review-carousel owl-carousel owl-theme">
-            @foreach($getreview as $review)
-            <div class="item">
-                <div class="review-profile">
-                    <img src='{!! asset("storage/app/public/images/profile/".$review["users"]->profile_image) !!}' alt="">
-                </div>
-                <h3>{{$review['users']->name}}</h3>
-                <p>{{$review->comment}}</p>
-            </div>
-            @endforeach
-        </div>
-    </div>
-</section>
--->
 
 <!-- <div class="card">
   <div class="card-header">

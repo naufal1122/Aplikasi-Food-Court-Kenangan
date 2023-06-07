@@ -20,8 +20,6 @@ Route::get('/', function () {
      return view('front.home');
 });
 
-Route::get('/landing', 'front\LandingController@index');
-
 //Landing Page//
 //Route::get('/landing', function () {
 //	return view('landingpage');
@@ -42,6 +40,8 @@ Route::post('auth', 'HomeController@auth');
 
 Route::group(['namespace' => 'front'], function () {
 	Route::get('/', 'HomeController@index');
+	Route::get('/landing', 'LandingController@index');
+	Route::get('/tenant', 'ListBranchesController@index');
 	Route::get('/405', 'HomeController@notallow');
 	Route::post('/home/contact', 'HomeController@contact');
 	Route::post('/home/checkpincode', 'HomeController@checkpincode');

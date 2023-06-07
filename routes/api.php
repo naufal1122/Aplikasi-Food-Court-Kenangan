@@ -85,15 +85,4 @@ Route::group(['namespace'=>'Api'],function (){
     Route::post('deleteaddress','AddressController@deleteaddress');
 
     Route::post('about','AboutController@about');
-
-    //Driver
-    Route::post('driverlogin','DriverController@login');
-    Route::post('drivergetprofile','DriverController@getprofile');
-    Route::post('drivereditprofile','DriverController@editprofile');
-    Route::post('driverchangepassword','DriverController@changepassword');
-    Route::post('driverforgotPassword','DriverController@forgotPassword');
-    Route::post('driverongoingorder','DriverController@ongoingorder');
-    Route::post('driverorder','DriverController@orderhistory');
-    Route::post('driverorderdetails','DriverController@getorderdetails');
-    Route::post('delivered','DriverController@delivered');
 });

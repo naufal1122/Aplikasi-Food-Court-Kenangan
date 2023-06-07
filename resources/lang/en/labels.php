@@ -19,7 +19,7 @@ return [
     "send"=>"Kirim",
     "view_more" => "Selengkapnya",
     "about_us" => "Our Tenant",
-    "our_review" => "Our Reviews",
+    "our_review" => "ULASAN",
     "banner_title" => "Pesan makanan cukup dari ponsel anda!",
     "banner_description" => "Tidak perlu lagi bingung untuk memesan makanan, cukup dengan ponsel anda, pesan makanan anda sekarang!",
     "contact_us" => "Contact us",

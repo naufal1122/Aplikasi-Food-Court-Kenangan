@@ -662,7 +662,7 @@
 	}
 
 	.review-carousel p {
-		font-size: 14px;
+		font-size: 18px;
 	}
 
 	.review-carousel {
@@ -801,10 +801,11 @@
 
 	.review-carousel h3 {
 		font-size: 20px;
+		font-weight: 800;
 	}
 
 	.review-carousel p {
-		font-size: 13px;
+		font-size: 18px;
 	}
 
 	.sec-head {
@@ -899,6 +900,17 @@
 	.banner-sec .item {
 		height: 260px;
 	}
+
+	.banner-sec-landing,
+	.banner-sec-landing .item {
+		height: 420px;
+	}
+
+	.banner-sec-landing {
+		margin-top: 25px;
+		margin-bottom: 25px;
+	}
+
 
 	.feature-sec [class*="col-"] {
 		padding: 0 5px;
@@ -1051,8 +1063,9 @@
 	}
 
 	.review-carousel p {
-		font-size: 12px;
+		font-size: 16px;
 		line-height: 1.4;
+		font-weight: 600;
 	}
 
 	.feature-box {
@@ -1231,6 +1244,26 @@
 
 	.signup-sec form .w-50 {
 		width: calc(50% - 5px) !important;
+}
+
+.user-dropdown {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333366;
+}
+
+.box-user {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background-color: #ebeaff
 }
 
 /* 350px css */
