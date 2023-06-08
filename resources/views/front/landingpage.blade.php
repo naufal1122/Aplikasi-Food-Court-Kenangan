@@ -16,6 +16,15 @@
     </div>
 </section>
 
+<div class="greetings" id="parallax-world-of-ugg">
+    <section>
+        <div class="title">
+            <h1>Selamat Datang, di</h1>
+            <h3>Kenangan App</h3>
+        </div>
+    </section>
+</div>
+
 <section class="feature-sec">
     <div class="container">
         <div class="feature-carousel owl-carousel owl-theme">
@@ -38,10 +47,60 @@
     </div>
 </section>
 
+    <!-- Food category -->
+    <div class="category-container">
+            <h1 class="category-title">Kategori Menu Makanan</h1>
+            <div class="grid-5">
+                <div class="category-item">
+                <div class="category-image">
+                        <div class="category-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+            </div>
+            <div class="grid-5 d-none">
+                <div class="category-item transparent"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item transparent"></div>
+            </div>
+        </div>
+        
+        <!-- Drink Category -->
+        <div class="category-container">
+            <h1 class="category-title">Kategori Menu Minuman</h1>
+            <div class="grid-5">
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+            </div>
+            <div class="grid-5 d-none">
+                <div class="category-item transparent"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item transparent"></div>
+            </div>
+        </div>
+    </div>
+
+<div class="banner">
+        <div class="banner-image">
+            <img src="{!! asset('storage/app/public/assets/images/banner kenangan.png') !!}" alt="">
+        </div>
+    </div>
+
 <section class="featured-cards">
     <div class="container">
         <h2 class="sec-cards">INFORMASI</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="row">
             <div class="col">
                 <div class="cards">
                     <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill" />
@@ -75,7 +134,7 @@
                     <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road" />
                     <div class="card-body">
                         <h5 class="card-title">Memesan Makanan</h5>
-                        <a href="{{URL::to('/')}}" class="btnsectenant">Bantuan</a>
+                        <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btnsectenant">Bantuan</button>
                     </div>
                 </div>
             </div>
@@ -84,7 +143,7 @@
                     <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers" />
                     <div class="card-body">
                         <h5 class="card-title">Makanan Datang!</h5>
-                        <a href="{{URL::to('/')}}" class="btnsectenant">Bantuan</a>
+                        <button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btnsectenant">Bantuan</button>
                     </div>
                 </div>
             </div>
@@ -92,19 +151,12 @@
 </section>
 
 <div id="parallax-world-of-ugg">
-    <section>
-        <div class="title">
-            <h1>Selamat Datang, di</h1>
-            <h3>Kenangan App</h3>
-        </div>
-    </section>
-
     <section class="parallax">
         <div class="parallax-one">
             <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" class="parallax-img" alt="">
         </div>
     </section>
-
+</div>
 
 
 
