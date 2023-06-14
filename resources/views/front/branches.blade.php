@@ -1,11 +1,14 @@
 @include('front.theme.headers')
-<section>
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">SEMUA <br> TENANT</h1>
-    </div>
-  </div>
-</section>
+<div class="parallax-main" id="parallax-world-of-ugg">
+    <section class="parallax">
+        <div class="parallax-two">
+          <div class="title-alltenant">
+            
+            <h2> Semua Tenant</h2>
+          </div>
+        </div>
+    </section>
+</div>
 
 <section>
   <div class="containertenant">

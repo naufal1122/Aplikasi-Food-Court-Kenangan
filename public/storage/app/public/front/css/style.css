@@ -2831,7 +2831,7 @@ margin-right: auto;
 }
 
 .containertenant {
-  margin-top: -45px;
+  margin-top: -25px;
   margin-bottom: -60px;
   padding: 5px 15px;
 }
@@ -2914,6 +2914,30 @@ margin-right: auto;
   background-position: top center;
 }
 
+#parallax-world-of-ugg .parallax-two {
+  padding-top: 200px; 
+  padding-bottom: 200px;
+  overflow: hidden; 
+  width: 100%; 
+  background-image: url('https://source.unsplash.com/_xN7UbcZ33I');
+  background-attachment: fixed; 
+  background-size: cover; 
+  -moz-background-size: cover; 
+  -webkit-background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: top center;
+  align-items: center;
+  justify-content: center;
+}
+
+#parallax-world-of-ugg .parallax-two h2{
+  color: white;
+  padding: 10px;
+  margin-bottom: -30px;
+  margin-top: 50px;
+  font-size: 25px;
+  font-family: var(--primary-bg-color);
+}
 /* Extras */
 /**************************/
 #parallax-world-of-ugg .line-break {
