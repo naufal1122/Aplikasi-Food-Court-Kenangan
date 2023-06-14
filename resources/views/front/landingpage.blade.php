@@ -48,7 +48,7 @@
  
 <section class="featured-cards">
     <div class="container">
-        <h2 class="sec-cards">INFORMAS</h2>
+        <h2 class="sec-cards">INFORMASI</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="cards">
