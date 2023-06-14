@@ -1273,6 +1273,28 @@
 	background-color: #ebeaff;
 	width: 100%;
 }
+   .category-title{
+	font-size: 20px;
+   }
+   .grid-5 {
+	grid-gap: 5px;
+	}
+  
+	.category-item{
+	  height: 50px;
+	}
+  
+	.category-image{
+	  width: 100%;
+	  height: 100%;
+	}
+  
+	.category-name p{
+	  font-size: 10px;
+	}
+	.category-container{
+		margin-top: 27px;
+	}
 
 
 .img-responsive-landing {
