@@ -38,6 +38,14 @@
     </div>
 </section>
 
+
+<div class="banner">
+        <div class="banner-image">
+            <img src="{!! asset('storage/app/public/assets/images/bannerkenangan.png') !!}" alt="">
+        </div>
+    </div>
+
+ 
 <section class="featured-cards">
     <div class="container">
         <h2 class="sec-cards">INFORMASI</h2>
@@ -129,19 +137,57 @@
         </div>
 </section>
 
-<div id="parallax-world-of-ugg">
-    <section>
-        <div class="title">
-            <h1>Selamat Datang, di</h1>
-            <h3>Kenangan App</h3>
-        </div>
-    </section>
-
+<div class="parallax-main" id="parallax-world-of-ugg">
     <section class="parallax">
         <div class="parallax-one">
             <img src="{!! asset('storage/app/public/assets/images/logo2.png') !!}" class="parallax-img" alt="">
         </div>
     </section>
+</div>
+<!-- Food category -->
+<div class="category-container">
+            <h1 class="category-title">Kategori Menu Makanan</h1>
+            <div class="grid-5">
+                <div class="category-item">
+                <div class="category-image">
+                        <div class="category-name">
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+            </div>
+            <div class="grid-5 d-none">
+                <div class="category-item transparent"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item transparent"></div>
+            </div>
+        </div>
+        
+        <!-- Drink Category -->
+        <div class="category-container">
+            <h1 class="category-title">Kategori Menu Minuman</h1>
+            <div class="grid-5">
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+            </div>
+            <div class="grid-5 d-none">
+                <div class="category-item transparent"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item"></div>
+                <div class="category-item transparent"></div>
+            </div>
+        </div>
+    </div>
+
 
 
 
