@@ -27,18 +27,18 @@
 <section>
   <div class="container">
     <div class="row">
+    @foreach ($branch as $branchlist)
       <div class="col">
-        @foreach ($branch as $branchlist)
         <div class="card">
-          <img src="{!! asset($branchlist->profile_image) !!}" class="card-img-top" alt="...">
+          <img src="{!! asset($branchlist->profile_image) !!}" class="Card-image-cap" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{ $branchlist->name }}</h5>
             <p class="card-text">Tenant {{ $branchlist->id }}</p>
             <a href="{{URL::to('/')}}" class="btnsectenant">Choose</a>
           </div>
         </div>
-        @endforeach
       </div>
+      @endforeach
     </div>
   </div>
 </section>

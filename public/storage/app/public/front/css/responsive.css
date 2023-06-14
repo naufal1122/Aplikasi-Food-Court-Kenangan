@@ -908,7 +908,7 @@
 
 	.banner-sec-landing {
 		margin-top: 25px;
-		margin-bottom: 35px;
+		margin-bottom: 25px;
 	}
 
 
@@ -920,7 +920,7 @@
 	.feature-sec {
 		padding: 10px 0;
 		margin-bottom: 5px;
-		/* margin-top: 35px; */
+		margin-top: 35px;
 	}
 
 	.sec-head {
@@ -1270,32 +1270,17 @@
 .card {
 	border-radius: 10px;
 	border: 1px solid var(--border-color);
-	background-color: #ebeaff
+	background-color: #ebeaff;
+	width: 100%;
 }
-   .category-title{
-	font-size: 20px;
-   }
-   .grid-5 {
-	grid-gap: 5px;
-	}
-  
-	.category-item{
-	  height: 50px;
-	}
-  
-	.category-image{
-	  width: 100%;
-	  height: 100%;
-	}
-  
-	.category-name p{
-	  font-size: 10px;
-	}
-	.category-container{
-		margin-top: 27px;
-	}
+
+
+.img-responsive-landing {
+	width: 100%;
+	height: 70px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
 
 /* 350px css */
-@media only screen and (max-width: 350px) {
-	
-}}
+@media only screen and (max-width: 350px) {}

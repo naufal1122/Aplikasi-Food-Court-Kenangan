@@ -57,7 +57,7 @@
                             @endif
 
                             @if ($cart->item_notes != "")
-                                <textarea placeholder="{{ trans('messages.enter_order_note') }}" readonly="" required="">{{$cart->item_notes}}</textarea>
+                                <textarea placeholder="{{ trans('messages.enter_order_note') }}" readonly="" required="true">{{$cart->item_notes}}</textarea>
                             @endif
                         </div>
                     </div>
@@ -165,8 +165,9 @@
                         @endif
 
                         <div class="promo-wrap open mt-3">
-                            <textarea name="notes" id="notes" placeholder="{{ trans('messages.enter_order_note') }}" rows="3"></textarea>
+                            <input name="notes" id="notes" placeholder="{{ trans('messages.enter_order_note') }}" rows="3" required=""></input>
                         </div>
+
 
                         <input type="hidden" id="lat" name="lat" />
                         <input type="hidden" id="lang" name="lang" />
@@ -208,7 +209,7 @@
 
                             @if ($paymentdata->payment_name == "COD")
                                 <div class="mt-3">
-                                    <button type="button" style="width: 100%;" class="btn open comman" onclick="CashonDelivery()">{{ trans('labels.cash_payment') }}</button>
+                                    <button type="button" style="width: 100%;" class="btncart" onclick="CashonDelivery()">{{ trans('labels.cash_payment') }}</button>
                                 </div>
                             @endif
 
@@ -389,6 +390,7 @@
         var building = $('#building').val();
         var email = $('#email').val();
 
+        //create required for order_notes
         if (order_type == "1") {
             if (address == "" && lat == "" && lang == "") {
                 $('#ermsg').text('Address is required');            

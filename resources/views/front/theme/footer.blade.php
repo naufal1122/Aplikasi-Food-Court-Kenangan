@@ -543,7 +543,7 @@ aria-hidden="true">
     "use strict";
     swal({
       title: "{{ trans('messages.are_you_sure') }}",
-      type: 'error',
+      type: 'info',
       showCancelButton: true,
       confirmButtonText: "{{ trans('messages.yes') }}",
       cancelButtonText: "{{ trans('messages.no') }}"

@@ -2773,8 +2773,10 @@ margin-right: auto;
   margin-bottom: 30px;
   border-radius: 30px;
   border: 1px solid var(--border-color);
-  background-color: #ebeaff
+  background-color: #ebeaff;
 }
+
+
 
 .card-title {
   margin-bottom: 10px;
@@ -2787,6 +2789,15 @@ margin-right: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   width: 50%;
+  position: relative;
+}
+
+.img-thumbnail {
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background-color: #ebeaff;
+  height: auto;
+  width: auto;
 }
 
 .card-text {
@@ -2987,3 +2998,34 @@ margin-right: auto;
   font-weight: 800;
   color: #333366;
 }
+
+.btncart {
+  padding: 6px 10px;
+  border-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  border: 2px solid #6C6BBF;
+  font-weight: 600;
+  font-size: 14px;
+  color: #6C6BBF;
+  background: transparent;
+}
+
+.btncart:hover {
+  background-color: #6C6BBF;
+  color: #ffffff;
+}
+
+.featured-cards {
+  background-color: #ffffff;
+  margin-top: 30px;
+  margin-right: auto;
+  font-weight: 800;
+  color: #333366;
+}
+
+.Card-image-cap {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
