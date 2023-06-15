@@ -120,7 +120,7 @@ return [
     "enter_landmark" => "Enter landmark",
     "enter_building" => "Enter building",
     "enter_delivery_address" => "Enter delivery address",
-    "enter_order_note" => "Write order notes...",
+    "enter_order_note" => "Masukkan nomor meja anda...",
     "enter_promocode" => "Gunakan Kode Promo",
     "search_here" => "Search here",
     "enter_email" => "Masukkan email",
@@ -156,7 +156,7 @@ return [
     "enter_title" => "Enter title",
     "enter_amount" => "Enter amount",
     "enter_variation" => "Enter variation",
-    "select_variation" => "Select variation",
+    "select_variation" => "Pilih Variasi",
 
     //Admin
     "enter_slider_title" => "Enter slider title",

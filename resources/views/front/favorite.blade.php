@@ -2,7 +2,9 @@
 
 <section class="favourite">
     <div class="container">
-        <h2 class="sec-head">{{ trans('labels.favourite_list') }}</h2>
+        <br>
+        <h2 class="sec-head">FAVORIT <br> ANDA</h2>
+        <br>
         <div class="row">
             @if (count($favorite) == 0)
                 <p>{{ trans('labels.no_data') }}</p>

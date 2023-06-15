@@ -119,7 +119,6 @@ class UserController extends Controller
                 'name' => 'required',
                 'email' => 'required',
                 'mobile' => 'required',
-                'accept' =>'accepted'
             ]);
             if ($validation->fails())
             {

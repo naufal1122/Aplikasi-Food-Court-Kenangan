@@ -2,7 +2,7 @@
 
 <section class="cart">
     <div class="container">
-        <h2 class="sec-head">PESANAN <br> SAYA</h2>
+        <h2 class="sec-head">KERANJANG <br> SAYA</h2>
         <br>
         <div class="row">
             @if (count($cartdata) == 0)
@@ -214,11 +214,12 @@
                             @endif
 
                         @endforeach
-
+                        <div class="mt-3">
+                        <button type="button" style="width: 100%;" class="btncartclose" href="{{URL::to('/product')}}">Kembali ke Menu</button>
+                        </div>
                     </div>
                 </div>
             @endif
-            
         </div>
     </div>
 </section>
