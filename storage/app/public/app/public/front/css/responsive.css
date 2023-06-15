@@ -685,7 +685,7 @@
 	.banner-sec .item .banner-contant {
 		width: calc(100% - 50px);
 		left: 50%;
-		transform: translateX(-50%);
+		transform: translate(-50%, -50%);
 	}
 
 	.banner-sec,
@@ -898,7 +898,7 @@
 
 	.banner-sec,
 	.banner-sec .item {
-		height: 260px;
+		height: 340px;
 	}
 
 	.banner-sec-landing,
@@ -920,7 +920,7 @@
 	.feature-sec {
 		padding: 10px 0;
 		margin-bottom: 5px;
-		margin-top: 35px;
+		margin-top: 20px;
 	}
 
 	.sec-head {
