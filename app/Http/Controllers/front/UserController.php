@@ -257,7 +257,6 @@ class UserController extends Controller
                 'email' => 'required|unique:users',
                 'mobile' => 'required|unique:users',
                 'password' => 'required|confirmed',
-                'accept' =>'accepted'
             ]);
             if ($validation->fails())
             {

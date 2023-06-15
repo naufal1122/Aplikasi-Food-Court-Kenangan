@@ -54,7 +54,6 @@ Route::group(['namespace'=>'Api'],function (){
     Route::post('updatepassword','AdminController@updatepassword');
     Route::post('updateprofile','AdminController@updateprofile');
 
-    Route::post('isopenclose','TimeController@isopenclose');
     Route::get('branchlist','BranchController@branchlist');
 
     Route::post('category','CategoryController@category');

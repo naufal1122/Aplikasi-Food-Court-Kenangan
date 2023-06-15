@@ -25,7 +25,7 @@
                     <div class="modal-body">
                         <span id="msg"></span>
                         @csrf
-                        @if (Auth::user()->type == "4")
+                        @if (Auth::user()->type == "1")
                         <div class="form-group">
                             <label for="branch_id" class="col-form-label">{{ trans('labels.select_branch') }}</label>
                             <select class="form-control" name="branch_id" id="branch_id">

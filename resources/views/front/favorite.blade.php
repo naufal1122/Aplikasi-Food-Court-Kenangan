@@ -3,7 +3,7 @@
 <section class="favourite">
     <div class="container">
         <br>
-        <h2 class="sec-head">FAVORIT <br> ANDA</h2>
+        <h2 class="sec-head">FAVORIT <br> SAYA</h2>
         <br>
         <div class="row">
             @if (count($favorite) == 0)

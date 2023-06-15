@@ -37,7 +37,7 @@ return [
     "quality_food" => "Our Quality Food",
     "favourite_list" => "Favourite List",
     "my_orders" => "Pesanan Saya",
-    "favourite_list" => "Favorit Anda",
+    "favourite_list" => "Favorit Saya",
     "edit_profile" => "Edit profile",
     "my_wallet" => "My Wallet",
     "wallet_balance" => "Wallet Balance",
