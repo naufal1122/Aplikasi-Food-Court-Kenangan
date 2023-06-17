@@ -1,4 +1,3 @@
-
 @extends('theme.default')
 
 @section('content')
@@ -72,8 +71,13 @@
                                 <input type="text" class="form-control" name="mobile" id="mobile" value="{{$getabout->mobile}}">
                             </div>
                             <div class="form-group">
-                                <label for="email" class="col-form-label">{{ trans('labels.email') }}</label>
-                                <input type="text" class="form-control" name="email" id="email" value="{{$getabout->email}}">
+                                <label for="email" class="col-form-label">Akun Instagram</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" name="email" id="email" value="{{ $getabout->email }}">
+                                </div>
                             </div>
                             @endif
                             @if (Auth::user()->type == "1")
@@ -92,9 +96,9 @@
                             </div>
                             @endif
                             @if (env('Environment') == 'sendbox')
-                                <button type="button" class="btn btn-primary" onclick="myFunction()">{{ trans('labels.update') }}</button>
+                            <button type="button" class="btn btn-primary" onclick="myFunction()">{{ trans('labels.update') }}</button>
                             @else
-                                <button type="submit" class="btn btn-primary">{{ trans('labels.update') }}</button>
+                            <button type="submit" class="btn btn-primary">{{ trans('labels.update') }}</button>
                             @endif
                         </form>
                     </div>
@@ -108,43 +112,38 @@
 @endsection
 @section('script')
 <script type="text/javascript">
-$(document).ready(function() {
+    $(document).ready(function() {
 
-    $('#about').on('submit', function(event){
-        "use strict";
-        event.preventDefault();
-        var form_data = new FormData(this);
-        $('#preloader').show();
-        $.ajax({
-            url:"{{ URL::to('admin/about/update') }}",
-            method:"POST",
-            data:form_data,
-            cache: false,
-            contentType: false,
-            processData: false,
-            dataType: "json",
-            success: function(result) {
-                $('#preloader').hide();
-                var msg = '';
-                if(result.error.length > 0)
-                {
-                    for(var count = 0; count < result.error.length; count++)
-                    {
-                        msg += '<div class="alert alert-danger">'+result.error[count]+'</div>';
+        $('#about').on('submit', function(event) {
+            "use strict";
+            event.preventDefault();
+            var form_data = new FormData(this);
+            $('#preloader').show();
+            $.ajax({
+                url: "{{ URL::to('admin/about/update') }}",
+                method: "POST",
+                data: form_data,
+                cache: false,
+                contentType: false,
+                processData: false,
+                dataType: "json",
+                success: function(result) {
+                    $('#preloader').hide();
+                    var msg = '';
+                    if (result.error.length > 0) {
+                        for (var count = 0; count < result.error.length; count++) {
+                            msg += '<div class="alert alert-danger">' + result.error[count] + '</div>';
+                        }
+                        $('#msg').html(msg);
+                        setTimeout(function() {
+                            $('#msg').html('');
+                        }, 5000);
+                    } else {
+                        location.reload();
                     }
-                    $('#msg').html(msg);
-                    setTimeout(function(){
-                      $('#msg').html('');
-                    }, 5000);
-                }
-                else
-                {
-                    location.reload();
-                }
-            },
-        })
+                },
+            })
+        });
     });
-});
-
 </script>
 @endsection

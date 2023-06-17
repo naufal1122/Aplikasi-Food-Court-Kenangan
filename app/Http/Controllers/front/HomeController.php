@@ -58,7 +58,7 @@ class HomeController extends Controller
 
         $getdata=User::select('currency')->where('type','1')->first();
 
-        $branch=User::select('id','name',\DB::raw("CONCAT('".url('/public/images/profile/')."/', profile_image) AS profile_image"))
+       $branch=User::select('id','name',\DB::raw("CONCAT('".url('/storage/app/public/images/profile/')."/', profile_image) AS profile_image"))
         ->where('type','=','4')
         ->where('is_available','=','1')
         ->get();

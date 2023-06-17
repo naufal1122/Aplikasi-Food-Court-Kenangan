@@ -40,7 +40,7 @@
                         @endif
                         <div class="form-group">
                             <label for="ingredients" class="col-form-label">{{ trans('labels.ingredients') }}</label>
-                            <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Enter ingredient">
+                            <input type="text" class="form-control" name="ingredients" id="ingredients" placeholder="Masukkan Bahan">
                         </div>
                         <div class="form-group">
                             <label for="image" class="col-form-label">{{ trans('labels.image') }} (400x400)</label>

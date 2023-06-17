@@ -57,8 +57,8 @@ return [
     "building" => "Building",
     "mobile" => "Nomor HP",
     "pincode" => "Pincode",
-    "save" => "Save",
-    "close" => "Close",
+    "save" => "Simpan",
+    "close" => "Keluar",
     "comment" => "Comment",
     "referral_code" => "Your Referral Code",
     "or" => "OR",
@@ -349,12 +349,12 @@ return [
     "rating" => "Rating",
 
     //Report
-    "date_range" => "Select Date Range",
-    "start_date" => "Start date",
-    "end_date" => "End date",
-    "total_orders" => "Total Orders",
-    "cancelled_orders" => "Cancelled Orders",
-    "total_earning" => "Total Earnings",
+    "date_range" => "Pilih Tanggal",
+    "start_date" => "Awal Tanggal",
+    "end_date" => "Akhir Tanggal",
+    "total_orders" => "Total Pesanan",
+    "cancelled_orders" => "Pesanan Dibatalkan",
+    "total_earning" => "Total Pendapatan",
 
     //Notification
     "send_notification" => "Send Notification",

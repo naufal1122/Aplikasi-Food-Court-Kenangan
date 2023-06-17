@@ -2451,16 +2451,14 @@ label input:checked+.cart-delivery-type-box {
 
 .js-cookie-consent {
   position: fixed;
-  left: 0;
   bottom: 0;
   padding: 10px;
   text-align: center;
   width: 100%;
   z-index: 9999;
-  background-color: #6C6BBF;
-  border-color: #6C6BBF;
+  background-color: #bf6b6b;
   color: #fff;
-  border: solid 2px #fff;
+  border-radius: 10px;
 }
 
 .js-cookie-consent-agree {

@@ -122,6 +122,18 @@
                 <h2 class="sec-head text-left">TENTANG TENANT</h2>
                 <h3 class="sec-title"> {!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->title_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</h3>
                 <p class="sec-title">{!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->about_content, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}</p>
+                <h3 class="sec-title">
+                    <a href="https://wa.me/{{ str_replace(['-', ' '], '', @$getabout->mobile) }}" target="_blank">
+                        <i class="fa fa-phone"></i>
+                        {!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->mobile, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}
+                    </a>
+                </h3>
+                <h3 class="sec-title">
+                    <a href="https://www.instagram.com/{{ @$getabout->instagram }}" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        {!! \Illuminate\Support\Str::limit(htmlspecialchars(@$getabout->email, ENT_QUOTES, 'UTF-8'), $limit = 500, $end = '...') !!}
+                    </a>
+                </h3>
             </div>
         </div>
     </div>

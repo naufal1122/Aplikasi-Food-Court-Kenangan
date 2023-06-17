@@ -147,7 +147,7 @@
                                 <div class="col-sm-4 nopadding">
                                     <div class="form-group">
                                         <label for="sale_price" class="col-form-label">{{ trans('labels.sale_price') }}</label>
-                                        <input type="text" class="form-control" id="sale_price" name="sale_price[]" placeholder="{{ trans('messages.enter_sale_price') }}" required="" value="0">
+                                        <input type="text" class="form-control" id="sale_price" name="sale_price[]" placeholder="{{ trans('messages.enter_sale_price') }}" value="0">
                                     </div>
                                 </div>
                                 <div class="col-sm-1 nopadding">
