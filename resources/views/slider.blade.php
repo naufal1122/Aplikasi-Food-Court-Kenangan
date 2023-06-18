@@ -41,7 +41,7 @@
 
                         <div class="form-group">
                             <label for="title" class="col-form-label">{{ trans('labels.title') }}</label>
-                            <input type="text" class="form-control" name="title" id="title" placeholder="{{ trans('messages.enter_title') }}">
+                            <input type="text" class="form-control" name="title" id="title" placeholder="{{ trans('messages.enter_title') }}" >
                         </div>
                         <div class="form-group">
                             <label for="description" class="col-form-label">{{ trans('labels.description') }}</label>
@@ -348,5 +348,6 @@ function removeimg(id){
     $('#remove_'+id).remove();
     $('#removeimg').val(images.join(","));
 }
+
 </script>
 @endsection

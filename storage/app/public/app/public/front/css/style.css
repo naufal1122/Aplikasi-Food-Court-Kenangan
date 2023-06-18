@@ -2364,23 +2364,27 @@ label input:checked+.cart-delivery-type-box {
 }
 
 .view-order-btn {
-  left: 50%;
-  bottom: 19px;
-  color: #fff;
-  z-index: 9999;
   position: fixed;
-  font-size: 20px;
-  line-height: 1.5;
-  font-weight: 400;
-  border-radius: 6px;
-  padding: 10px 40px;
-  background-color: #6C6BBF;
-  transform: translateX(-50%);
-  box-shadow: 0 0 4px var(--primary-color-hover);
+  bottom: 150px;
+  right: 24px;
+  width: 187px;
+  height: 40px;
+  z-index: 9999;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 10px;
+  color: #6C6BBF;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: #fff;
+  box-shadow: 0 0 22px rgba(0, 0, 0, 0.2);
+  font-family: var(--secondary-font);
 }
 
 .view-order-btn:hover {
-  color: #fff;
+  color: #ffffff;
+  background-color: #6C6BBF;
 }
 
 
@@ -2468,7 +2472,7 @@ label input:checked+.cart-delivery-type-box {
 }
 
 .js-cookie-consent-agree:hover {
-  background-color: #6C6BBF;
+  background-color: #bf6b6b;
   color: white;
   border: 2px solid #ffffff;
 }

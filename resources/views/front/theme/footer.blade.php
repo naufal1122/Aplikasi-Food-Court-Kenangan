@@ -197,6 +197,28 @@
   </div>
 </div>
 
+<!-- Bottom Navbar -->
+<nav class="fixed-bottom d-md-none d-lg-none d-xl-none">
+  <div class="tab-nav-container">
+    <div class="tab {{ Request::is('/') ? 'active' : '' }} purple" onclick="redirectTo('{{URL::to('/')}}')">
+      <i class="fas fa-home"></i>
+      <p>Beranda</p>
+    </div>
+    <div class="tab {{ Request::is('cart') ? 'active' : '' }} pink" onclick="redirectTo('{{ URL::to('/cart') }}')">
+      <i class="far fa-shopping-cart"></i><span id="cartcnt">{{Session::get('cart')}}</span>
+      <p>Keranjang</p>
+    </div>
+    <div class="tab {{ Request::is('favorite') ? 'active' : '' }} yellow" onclick="redirectTo('{{ URL::to('/favorite') }}')">
+      <i class="far fa-heart"></i>
+      <p>Favorit</p>
+    </div>
+    <div class="tab {{ Request::is('orders') ? 'active' : '' }} teal" onclick="redirectTo('{{ URL::to('/orders') }}')">
+      <i class="far fa-shopping-basket"></i>
+      <p>Pesanan</p>
+    </div>
+  </div>
+</nav>
+
 <footer>
   <div class="container d-flex justify-content-between flex-wrap">
     <div class="footer-head">
@@ -219,9 +241,9 @@
 
 <!-- View order btn -->
 @if (Session::get('cart') && !request()->is('cart'))
-<a href="{{URL::to('/cart')}}" class="view-order-btn">{{ trans('labels.view_my_order') }}</a>
+<a href="{{URL::to('/cart')}}" class="view-order-btn"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;KERANJANG</a>
 @else
-<a href="{{URL::to('/cart')}}" class="view-order-btn" style="display: none;">{{ trans('labels.view_my_order') }}</a>
+<a href="{{URL::to('/cart')}}" class="view-order-btn" style="display: none;">&nbsp;&nbsp;KERANJANG</a>
 @endif
 <!-- View order btn -->
 
@@ -246,8 +268,22 @@
 <script src="{!! asset('storage/app/public/assets/plugins/sweetalert/js/sweetalert.min.js') !!}"></script>
 
 <script type="text/javascript">
-  
+  const tabs = document.querySelectorAll(".tab");
+  tabs.forEach((clickedTab) => {
+    clickedTab.addEventListener('click', () => {
+      tabs.forEach((tab => {
+        tab.classList.remove("active");
+      }))
+      clickedTab.classList.add("active");
+      const clickedTabBGColor = getComputedStyle(clickedTab).getPropertyValue(
+        "color"
+      );
+    });
+  });
 
+  function redirectTo(url) {
+    window.location.href = url;
+  }
 
   function myFunction() {
     "use strict";

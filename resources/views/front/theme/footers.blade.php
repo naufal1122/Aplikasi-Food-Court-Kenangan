@@ -223,9 +223,9 @@ aria-hidden="true">
 
 <!-- View order btn -->
 @if (Session::get('cart') && !request()->is('cart'))
-  <a href="{{URL::to('/cart')}}" class="view-order-btn">{{ trans('labels.view_my_order') }}</a>
+<a href="{{URL::to('/cart')}}" class="view-order-btn"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;KERANJANG</a>
 @else
-  <a href="{{URL::to('/cart')}}" class="view-order-btn" style="display: none;">{{ trans('labels.view_my_order') }}</a>
+<a href="{{URL::to('/cart')}}" class="view-order-btn" style="display: none;">&nbsp;&nbsp;KERANJANG</a>
 @endif
 <!-- View order btn -->
 
