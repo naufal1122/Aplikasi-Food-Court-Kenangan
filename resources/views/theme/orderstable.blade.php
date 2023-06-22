@@ -11,7 +11,7 @@
             <th>{{ trans('labels.payment_id') }}</th>
             <th>{{ trans('labels.order_type') }}</th>
             <th>{{ trans('labels.order_status') }}</th>
-            <th>{{ trans('labels.order_assigned_to') }}</th>
+            <th>No. Meja</th>
             <th>{{ trans('labels.created_at') }}</th>
             @if (Auth::user()->type == "4")
             <th>{{ trans('labels.change_status') }}</th>
@@ -77,11 +77,7 @@
                     @endif
                 </td>
                 <td>
-                    @if ($orders->name == "")
-                    --
-                    @else
-                    {{$orders->name}}
-                    @endif
+                    {{$orders->order_notes}}
                 </td>
                 <td>{{$orders->created_at}}</td>
                 @if (Auth::user()->type == "4")

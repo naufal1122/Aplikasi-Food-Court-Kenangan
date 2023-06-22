@@ -80,7 +80,31 @@ Repository Git diatas telah di commit oleh project ini sebanyak ```55 kali``` co
 - ```api for item list```, penambahan api untuk list item
 - ```penambahan dokumentasi aplikasi```
 - ```dokumentasi stage 2 fix```
-
+- ```minor changes, fix button frontend```
+- ```tes commit 2 May```
+- ```responsive fix```
+- ```landing page stage 1```
+- ```commit 9 mar, upgrading responsive```
+- ```merge branch master```
+- ```commit 10 May```
+- ```Cart feature```
+- ```landing page revision stage 2```
+- ```merge branch master```
+- ```remove otp verify for login with google, easy login one click```
+- ```food order, open bill mode```
+- ```commit 31 may```
+- ```COMMIT NEAR - FINAL```
+- ```near final```
+- ```add landing page template```
+- ```landing page stage 3```
+- ```commit 07 June```
+- ```Landing page stage 4```
+- ```commit 14 June```
+- ```commit 15 June```
+- ```commit 16 June```
+- ```fix category modal```
+- ```stage 1 after deploy```
+- ```add niche bottom navbar```
 
 
 

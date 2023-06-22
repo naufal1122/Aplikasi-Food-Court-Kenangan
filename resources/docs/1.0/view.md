@@ -40,27 +40,47 @@ View grup admin mempunyai berbagai macam view, diantaranya:
 - `admin.about`
 - `admin.aboutus`
 - `admin.additem`
+- `admin.addons`
 - `admin.banner`
 - `admin.branches`
 - `admin.category`
+- `admin.contact`
 - `admin.edititem`
 - `admin.home`
 - `admin.ingredients`
+- `admin.invoice`
 - `admin.item`
+- `admin.manage-payment`
+- `admin.notification`
+- `admin.orders`
+- `admin.payment`
+- `admin.promocode`
+- `admin.report`
+- `admin.reviews`
 - `admin.slider`
+- `admin.user-details`
+- `admin.users`
 
 <a name="section-6"></a>
 ## View Grup Front
 View grup front mempunyai berbagai macam view, diantaranya:
 - `front.405`
 - `front.address`
+- `front.branches`
+- `front.cart`
+- `front.favorite`
 - `front.forgot-password`
 - `front.home`
+- `front.landingpage`
 - `front.login`
+- `front.order-details`
+- `front.orders`
 - `front.otp-verify`
 - `front.product-details`
 - `front.product`
+- `front.search`
 - `front.signup`
+- `front.success`
 
 <a name="section-7"></a>
 ## Manajamen Translasi

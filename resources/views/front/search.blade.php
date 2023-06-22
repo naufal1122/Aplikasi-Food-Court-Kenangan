@@ -5,7 +5,7 @@
         <div class="product-rev-wrap">
             <div class="cat-product search-product">
                 <div class="cart-pro-head">
-                    <h2 class="sec-head">{{ trans('labels.quality_food') }}</h2>
+                    <h2 class="sec-head">SEMUA MAKANAN</h2>
                     <div class="btn-wrap" data-toggle="buttons">
                         <label id="list" class="btn">
                             <input type="radio" name="layout" id="layout1"> <i class="fas fa-list"></i>
@@ -22,9 +22,6 @@
                             <div class="pro-img">
                                 @foreach ($item->variation as $key => $value)
                                     @if($value->sale_price > 0)
-                                        <div class="ribbon-wrapper">
-                                            <div class="ribbon">ON SALE</div>
-                                        </div>
                                     @endif
                                     @break
                                 @endforeach

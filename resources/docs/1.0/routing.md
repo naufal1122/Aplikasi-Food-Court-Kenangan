@@ -23,6 +23,8 @@ Project ini telah dilengkapi dengan metode routing grup, yaitu routing yang memi
 ```php
 Route::group(['namespace' => 'front'], function () {
 	Route::get('/', 'HomeController@index');
+	Route::get('/landing', 'LandingController@index');
+	Route::get('/tenant', 'ListBranchesController@index');
 	Route::get('/405', 'HomeController@notallow');
 	Route::post('/home/contact', 'HomeController@contact');
 	Route::post('/home/checkpincode', 'HomeController@checkpincode');
@@ -57,6 +59,17 @@ Route::group(['namespace' => 'front'], function () {
 	Route::get("/search","ItemController@search");
 	Route::post('product/searchitem', 'ItemController@searchitem');
 
+	Route::get('/favorite', 'FavoriteController@index');
+	
+
+	Route::get('/cart', 'CartController@index');
+	Route::post('/cart/qtyupdate','CartController@qtyupdate');
+	Route::post('/cart/applypromocode', 'CartController@applypromocode');
+	Route::post('/cart/deletecartitem', 'CartController@deletecartitem');
+	Route::post('/cart/removepromocode', 'CartController@removepromocode');
+	Route::get('/cart/isopenclose', 'CartController@isopenclose');
+	Route::get('/cart/checkitem', 'CartController@checkitem');
+
 	Route::get('/address', 'UserController@address');
 	Route::post('/user/addaddress', 'UserController@addaddress');
 	Route::post('/user/editaddress', 'UserController@editaddress');
@@ -64,8 +77,33 @@ Route::group(['namespace' => 'front'], function () {
 	Route::post('/user/delete', 'UserController@delete');
 	Route::get ('/logout', 'UserController@logout' );
 
+	Route::get('/orders', 'OrderController@index');
+	Route::post('/orders/cashondelivery', 'OrderController@cashondelivery');
+	Route::post('/orders/walletorder', 'OrderController@walletorder');
+	Route::post('/order/ordercancel', 'OrderController@ordercancel');
+	Route::get('/order-details/{id}', 'OrderController@orderdetails');
+
+	Route::get('/privacypolicy', 'PrivacyPolicyController@index');
+	Route::get('/privacy', 'PrivacyPolicyController@privacy');
+
+	Route::get('/termscondition', 'TermsController@index');
+	Route::get('/terms', 'TermsController@terms');
+	
 	Route::get('/aboutus', 'AboutController@index');
 	Route::get('/about', 'AboutController@about');
+
+	// Get Route For Show Payment Form
+	Route::get('/paywithrazorpay', 'RazorpayController@payWithRazorpay')->name('paywithrazorpay');
+	// Post Route For Makw Payment Request
+	Route::post('/payment', 'RazorpayController@payment')->name('payment');
+
+	Route::post('/addmoney', 'RazorpayController@addmoney')->name('addmoney');
+
+	Route::post('/addmoneystripe', 'CheckoutController@addmoneystripe');
+	
+	Route::post('stripe-payment/charge', 'CheckoutController@charge');
+
+	Route::get('/wallet', 'UserController@wallet');
 });
 ```
 
@@ -83,6 +121,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::get('home', 'AdminController@home');
 		Route::post('changePassword', 'AdminController@changePassword');
 		Route::post('settings', 'AdminController@settings');
+		Route::get('getorder', 'AdminController@getorder');
+		Route::get('clearnotification', 'AdminController@clearnotification');
 
 		Route::get('branches', 'BranchController@index');
 		Route::post('branches/store', 'BranchController@store');
@@ -116,14 +156,6 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('category/status', 'CategoryController@status');
 		Route::post('category/delete', 'CategoryController@delete');
 
-		Route::get('ingredients', 'IngredientsController@index');
-		Route::post('ingredients/store', 'IngredientsController@store');
-		Route::get('ingredients/list', 'IngredientsController@list');
-		Route::post('ingredients/show', 'IngredientsController@show');
-		Route::post('ingredients/update', 'IngredientsController@update');
-		Route::post('ingredients/status', 'IngredientsController@status');
-		Route::post('ingredients/delete', 'IngredientsController@delete');
-
 		Route::get('item', 'ItemController@index');
 		Route::get('additem', 'ItemController@additem');
 		Route::get('edititem/{id}', 'ItemController@edititem');
@@ -138,17 +170,54 @@ Route::group(['prefix' => 'admin', 'namespace' => 'admin'], function () {
 		Route::post('item/delete', 'ItemController@delete');
 		Route::post('item/deletevariation', 'ItemController@deletevariation');
 
-		Route::get('addons', 'AddonsController@index');
-		Route::post('addons/getitem', 'AddonsController@getitem');
-		Route::post('addons/store', 'AddonsController@store');
-		Route::get('addons/list', 'AddonsController@list');
-		Route::post('addons/show', 'AddonsController@show');
-		Route::post('addons/update', 'AddonsController@update');
-		Route::post('addons/status', 'AddonsController@status');
-		Route::post('addons/delete', 'AddonsController@delete');
+		Route::get('payment', 'PaymentController@index');
+		Route::post('payment/status', 'PaymentController@status');
+		Route::get('manage-payment/{id}', 'PaymentController@managepayment');
+		Route::post('payment/update', 'PaymentController@update');
+
+		Route::get('promocode', 'PromocodeController@index');
+		Route::post('promocode/store', 'PromocodeController@store');
+		Route::get('promocode/list', 'PromocodeController@list');
+		Route::post('promocode/show', 'PromocodeController@show');
+		Route::post('promocode/update', 'PromocodeController@update');
+		Route::post('promocode/status', 'PromocodeController@status');
+
+		Route::get('users', 'UserController@index');
+		Route::post('users/store', 'UserController@store');
+		Route::get('users/list', 'UserController@list');
+		Route::post('users/show', 'UserController@show');
+		Route::post('users/update', 'UserController@update');
+		Route::post('users/status', 'UserController@status');
+		Route::get('user-details/{id}', 'UserController@userdetails');
+		Route::post('users/addmoney', 'UserController@addmoney');
+		Route::post('users/deductmoney', 'UserController@deductmoney');
+
+		Route::get('orders', 'OrderController@index');
+		Route::get('orders/list', 'OrderController@list');
+		Route::get('invoice/{id}', 'OrderController@invoice');
+		Route::post('orders/destroy', 'OrderController@destroy');
+		Route::post('orders/update', 'OrderController@update');
+		Route::post('orders/assign', 'OrderController@assign');
+
+		Route::get('reviews', 'RattingController@index');
+		Route::get('reviews/list', 'RattingController@list');
+		Route::post('reviews/destroy', 'RattingController@destroy');
+
+		Route::get('report', 'ReportController@index');
+		Route::get('report/list', 'ReportController@list');
+		Route::post('report/show', 'ReportController@show');
+		Route::post('report/destroy', 'ReportController@destroy');
+		Route::post('report/update', 'ReportController@update');
+		Route::post('report/assign', 'ReportController@assign');
+
+		Route::get('notification', 'NotificationController@index');
+		Route::post('notification/store', 'NotificationController@store');
+		Route::get('notification/list', 'NotificationController@list');
 
 		Route::get('settings', 'AboutController@index');
 		Route::post('about/update', 'AboutController@update');
+
+		Route::get('contact', 'ContactController@index');
 	});
 
 	Route::get('logout', 'AdminController@logout');

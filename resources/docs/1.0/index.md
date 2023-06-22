@@ -4,15 +4,30 @@
     - [Repository](/{{route}}/{{version}}/repository)
     - [Database](/{{route}}/{{version}}/database)
 
-- ## Screenshot Aplikasi
-    - [Landing Page](/{{route}}/{{version}}/landingUi)
-    - [Dashboard](/{{route}}/{{version}}/dashboardUi)
-    - [Autentikasi](/{{route}}/{{version}}/authUi)
+- ## All About Customer
+    - [Tentang Profil](/{{route}}/{{version}}/CustomerProfile)
+    - [Memilih Tenant](/{{route}}/{{version}}/CustomerTenant)
+    - [Memesan Makanan](/{{route}}/{{version}}/CustomerOrder)
+    - [Mengenai Pesanan](/{{route}}/{{version}}/CustomerAbout)
 
-- ## Fitur Aplikasi
-    - [Fitur User Customer](/{{route}}/{{version}}/fitur)
-    - [Fitur Admin Tenant](/{{route}}/{{version}}/fiturAdmin)
-    - [Fitur Super Admin](/{{route}}/{{version}}/fiturSuperAdmin)
+- ## Memulai Tenant Anda
+    - [Tentang Fitur Admin](/{{route}}/{{version}}/TenantAbout)
+    - [Edit Informasi Tenant](/{{route}}/{{version}}/TenantSettings)
+    - [Dekorasi Tenant](/{{route}}/{{version}}/TenantDekor)
+    - [Menambah Master Menu](/{{route}}/{{version}}/TenantMenu)
+    - [Menambah Kode Promo](/{{route}}/{{version}}/TenantPromo)
+    - [Menerima Pesanan](/{{route}}/{{version}}/TenantAccept)
+    - [Cetak Laporan](/{{route}}/{{version}}/TenantReport)
+
+- ## Pengelola Foodcourt
+    - [Informasi Foodcourt](/{{route}}/{{version}}/AdminInfo)
+    - [Menambah Tenant Baru](/{{route}}/{{version}}/AdminAddTenant)
+    - [Dashboard](/{{route}}/{{version}}/AdminDash)
+    - [Metode Pembayaran](/{{route}}/{{version}}/AdminPay)
+    - [Dompet Digital](/{{route}}/{{version}}/AdminWallet)
+    - [Customer](/{{route}}/{{version}}/AdminCustomer)
+    - [Cetak Semua Laporan](/{{route}}/{{version}}/AdminReport)
+    - [Memantau & Mengelola](/{{route}}/{{version}}/AdminSee)
 
 - ## Getting Started with Code
     - [Routing](/{{route}}/{{version}}/routing)
@@ -20,8 +35,3 @@
     - [Model](/{{route}}/{{version}}/model)
     - [View](/{{route}}/{{version}}/view)
     - [Storage](/{{route}}/{{version}}/storage)
-
-- ## Testing
-    - [Testing untuk User](/{{route}}/{{version}}/blackbox)
-    - [Testing untuk Admin](/{{route}}/{{version}}/blackboxAdmin)
-    - [Testing untuk Super Admin](/{{route}}/{{version}}/blackboxSuperAdmin)

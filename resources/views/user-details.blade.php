@@ -17,7 +17,7 @@
     <!-- End Row -->
 
     <div class="row">
-        <div class="col-lg-6 col-sm-6">
+        <div class="col-lg-4 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="text-center">
@@ -28,7 +28,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-sm-6">
+        <div class="col-lg-4 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        <img src='{!! asset("storage/app/public/front/images/wallet.png") !!}' width="100px" alt="">
+                        <h5 class="mt-3 mb-1">{{ trans('labels.wallet_balance') }}</h5>
+                        <p class="m-0">{{Auth::user()->currency}}{{number_format($getusers->wallet, 2)}}</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#addMoney" data-whatever="@addMoney"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Tambah Nominal</button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#deductMoney" data-whatever="@deductMoney"><i class="fa fa-minus" aria-hidden="true"></i>&nbsp;Kurangi Nominal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="text-center">

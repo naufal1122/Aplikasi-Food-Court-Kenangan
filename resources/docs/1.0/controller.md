@@ -28,9 +28,19 @@ Project ini mempunyai beberapa Controller yang masuk dalam grup Admin. Setiap co
 - `BannerController : Controller untuk halaman Banner`
 - `BranchController : Controller untuk halaman Tenant`
 - `CategoryController : Controller untuk halaman Kategori Menu`
-- `IngredientsController : Controller untuk halaman Bahan Menu`
+- `ContactController : Controller untuk halaman Contact`
+- `IngredientController : Controller untuk halaman Bahan Menu`
 - `ItemController : Controller untuk halaman Menu`
+- `NotificationController : Controller untuk halaman Notifikasi`
+- `OrderController : Controller untuk halaman Order`
+- `PaymentController : Controller untuk halaman Pembayaran`
+- `PincodeController : Controller untuk halaman Kode Promo`
+- `PromocodeController : Controller untuk halaman Kode Promo`
+- `RatingController : Controller untuk halaman Rating`
+- `ReportController : Controller untuk halaman Laporan`
 - `SliderController : Controller untuk halaman Slider`
+- `TermsController : Controller untuk halaman Terms`
+- `TimeController : Controller untuk halaman Jam Operasional`
 - `UserController : Controller untuk halaman User`
 
 
@@ -51,8 +61,14 @@ Project ini mempunyai beberapa Controller yang masuk dalam grup Auth. Setiap con
 
 Project ini mempunyai beberapa Controller yang masuk dalam grup Front. Setiap controller di Front mempunyai fungsi yang berbeda sesuai dengan kebutuhan. Berikut adalah daftar Controller yang ada di grup Front:
 - `AboutController : Controller untuk halaman About`
+- `CartController : Controller untuk halaman Keranjang Belanja`
+- `CheckoutController : Controller untuk halaman Checkout`
+- `FavoriteController : Controller untuk halaman Favorit`
 - `HomeController : Controller untuk halaman Home (Landing Page)`
 - `ItemController : Controller untuk halaman Menu`
+- `LandingController : Controller untuk halaman Landing Page`
+- `ListBranchesController : Controller untuk halaman List Tenant`
+- `OrderController : Controller untuk halaman Order`
 - `UserController : Controller untuk Halaman User`
 
 <a name="section-5"></a>

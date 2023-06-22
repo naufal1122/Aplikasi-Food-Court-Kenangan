@@ -12,6 +12,13 @@
 - [Relasi Model Ingredients](#section-8)
 - [Relasi Model Slider ](#section-9)
 - [Relasi Model Banner](#section-10)
+- [Relasi Model Contact](#section-12)
+- [Relasi Model Favorite](#section-13)
+- [Relasi Model Order](#section-16)
+- [Relasi Model OrderDetail](#section-17)
+- [Relasi Model Promocode](#section-21)
+- [Relasi Model Rating](#section-22)
+- [Relasi Model Cart](#section-24)
 
 <a name="section-1"></a>
 ## Model
@@ -166,3 +173,112 @@ Relasi ini digunakan untuk mendefinisikan relasi antara tabel `sliders` dan `use
 Relasi ini digunakan untuk mendefinisikan relasi antara tabel `banners` dan `items` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `item` dari tabel `banners` berdasarkan `item_id` yang ada di tabel `banners`.<br><br>
 Relasi ini digunakan untuk mendefinisikan relasi antara tabel `banners` dan `categories` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `category` dari tabel `banners` berdasarkan `cat_id` yang ada di tabel `banners`.<br><br>
 Relasi ini digunakan untuk mendefinisikan relasi antara tabel `banners` dan `users` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `branch` dari tabel `banners` berdasarkan `branch_id` yang ada di tabel `banners`.
+
+<a name="section-12"></a>
+## Relasi Model Contact
+
+```php
+    public function branch(){
+        return $this->hasOne('App\User','id','branch_id');
+    }
+```
+
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `contacts` dan `users` dengan relasi `one to one`. <br> Relasi ini digunakan untuk mendapatkan data `branch` dari tabel `contacts` berdasarkan `branch_id` yang ada di tabel `contacts`.
+
+<a name="section-13"></a>
+## Relasi Model Favorite
+
+```php
+public function itemimage(){
+
+        return $this->hasOne('App\ItemImages','item_id','id')->select('id','item_id',\DB::raw("CONCAT('".url('/storage/app/public/images/item/')."/', image) AS image"));
+
+    }
+
+    public function variation(){
+        return $this->hasMany('App\Variation','item_id','id')->select('variation.id','variation.item_id','variation.variation','variation.product_price','variation.sale_price');
+    }
+```
+
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `favorites` dan `item_images` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `itemimage` dari tabel `favorites` berdasarkan `item_id` yang ada di tabel `favorites`.<br><br>
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `favorites` dan `variations` dengan relasi `one to many`. Relasi ini digunakan untuk mendapatkan data `variation` dari tabel `favorites` berdasarkan `item_id` yang ada di tabel `favorites`.
+
+<a name="section-16"></a>
+## Relasi Model Order
+
+```php
+    public function users(){
+        return $this->hasOne('App\User','id','user_id');
+    }
+
+    public function branch(){
+        return $this->hasOne('App\User','id','branch_id');
+    }
+```
+
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `orders` dan `users` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `users` dari tabel `orders` berdasarkan `user_id` yang ada di tabel `orders`.<br><br>
+
+<a name = "section-17"></a>
+## Relasi Model OrderDetails
+
+```php
+public function itemimage(){
+        return $this->hasOne('App\ItemImages','item_id','id')->select('item_images.id','item_images.item_id',\DB::raw("CONCAT('".url('/storage/app/public/images/item/')."/', item_images.image) AS image"));
+    }
+
+    public function items(){
+        return $this->hasOne('App\Item','id','item_id');
+    }
+```
+
+<a name = "section-21"></a>
+## Relasi Model Promocode
+
+```php
+    public function branch(){
+        return $this->hasOne('App\User','id','branch_id');
+    }
+```
+
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `promocodes` dan `users` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `branch` dari tabel `promocodes` berdasarkan `branch_id` yang ada di tabel `promocodes`.
+
+<a name = "section-22"></a>
+## Relasi Model Rating
+
+```php
+    public function users(){
+        return $this->hasOne('App\User','id','user_id');
+    }
+
+    public function branch(){
+        return $this->hasOne('App\User','id','branch_id');
+    }
+```
+
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `ratings` dan `users` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `users` dari tabel `ratings` berdasarkan `user_id` yang ada di tabel `ratings`.<br><br>
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `ratings` dan `users` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `branch` dari tabel `ratings` berdasarkan `branch_id` yang ada di tabel `ratings`.
+
+<a name = "section-23"></a>
+## Relasi Model Cart
+
+```php
+    public function itemimage(){
+        return $this->hasOne('App\ItemImages','item_id','id')->select('item_images.id','item_images.item_id',\DB::raw("CONCAT('".url('/storage/app/public/images/item/')."/', item_images.image) AS image"));
+    }
+
+    public function items(){
+        return $this->hasOne('App\Item','id','item_id');
+    }
+
+    public function variation(){
+        return $this->hasOne('App\Variation','id','variation_id');
+    }
+```
+
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `carts` dan `item_images` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `itemimage` dari tabel `carts` berdasarkan `item_id` yang ada di tabel `carts`.<br><br>
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `carts` dan `items` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `items` dari tabel `carts` berdasarkan `item_id` yang ada di tabel `carts`.<br><br>
+Relasi ini digunakan untuk mendefinisikan relasi antara tabel `carts` dan `variations` dengan relasi `one to one`. Relasi ini digunakan untuk mendapatkan data `variation` dari tabel `carts` berdasarkan `variation_id` yang ada di tabel `carts`.
+
+
+
+

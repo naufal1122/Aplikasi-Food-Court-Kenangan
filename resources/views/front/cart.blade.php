@@ -215,8 +215,8 @@
                             @endif
 
                         @endforeach
-                        <div class="mt-3">
-                        <button type="button" style="width: 100%;" class="btncartclose" href="{{URL::to('/product')}}">Kembali ke Menu</button>
+                        <div class="mt-3">                            
+                            <button type="button" style="width: 100%;" class="btncartclose" onclick="WalletOrder()">{{ trans('labels.my_wallet') }} ({{$taxval->currency}}{{number_format($userinfo->wallet, 2)}})</button>
                         </div>
                     </div>
                 </div>

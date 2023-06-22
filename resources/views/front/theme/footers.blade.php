@@ -752,7 +752,7 @@ aria-hidden="true">
                 $('input[type=checkbox]').not(this).prop('checked', false);
             });
         });
-        
+
 </script>
 @yield('script')
 </body>

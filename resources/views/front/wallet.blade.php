@@ -2,7 +2,7 @@
 
 <section class="order-details">
     <div class="container">
-        <h2 class="sec-head">{{ trans('labels.my_wallet') }}</h2>
+        <h2 class="sec-head">DOMPET <br> SAYA</h2>
 
         <div class="row mt-5">
             <div class="col-lg-4">
@@ -14,34 +14,6 @@
                     <h2 class="text-center mt-3" style="color: #fff;">{{ trans('labels.wallet_balance') }}</h2>
                     <h1 class="text-center" style="color: #fff;"><span>{{@$getdata->currency}}{{number_format(@$walletamount->wallet, 2)}}</span></h1>
                 </div>
-                @foreach($getpaymentdata as $paymentdata)
-                
-                    @if ($paymentdata->payment_name == "RazorPay")
-                        <div class="mt-3">
-                            <button type="button" data-toggle="modal" data-target="#AddMoneypay" style="width: 100%;" class="btn">{{ trans('labels.add_razorpay') }}</button>
-                        </div>
-
-                        @if($paymentdata->environment=='1')
-                            <input type="hidden" name="razorpay" id="razorpay" value="{{$paymentdata->test_public_key}}">
-                        @else
-                            <input type="hidden" name="razorpay" id="razorpay" value="{{$paymentdata->live_public_key}}">
-                        @endif
-
-                    @endif
-
-                    @if ($paymentdata->payment_name == "Stripe")
-                        <div class="mt-3">
-                            <button type="button" data-toggle="modal" data-target="#AddMoneyStripe" style="width: 100%;" class="btn">{{ trans('labels.add_stripe') }}</button>
-                        </div>
-
-                        @if($paymentdata->environment=='1')
-                            <input type="hidden" name="stripe" id="stripe" value="{{$paymentdata->test_public_key}}">
-                        @else
-                            <input type="hidden" name="stripe" id="stripe" value="{{$paymentdata->live_public_key}}">
-                        @endif
-                    @endif
-
-                @endforeach
             </div>
             <div class="col-lg-8">
                 @foreach ($transaction_data as $orders)
